@@ -915,15 +915,18 @@ input:focus, textarea:focus {
    ============================= */
 .competencias-card-animated {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start; /* ← alineado a la izquierda */
+  text-align: left;
   gap: 2rem;
   background-color: #f1f1f1;
   border-radius: 16px;
-  padding: 2rem;
-  align-items: center;
-  justify-content: space-between;
+  padding: 2rem 3rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  max-width: 900px;         /* limita el ancho total */
+  margin-left: 0;           /* lo alinea a la izquierda */
 }
+
 
 .competencias-text {
   flex: 1 1 50%;
@@ -1064,7 +1067,7 @@ main {
 .section {
   background: #f0f0f0;
   padding: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
