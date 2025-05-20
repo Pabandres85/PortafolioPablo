@@ -6,6 +6,6 @@ function enviarCorreo() {
   const asunto = encodeURIComponent(`Mensaje de contacto de ${nombre}`);
   const cuerpo = encodeURIComponent(`Nombre: ${nombre}\nCorreo: ${correo}\n\nMensaje:\n${mensaje}`);
 
-  window.location.href = `mailto:susana.hurtado.psi@gmail.com?subject=${asunto}&body=${cuerpo}`;
+  window.location.href = `mailto:ingenieropabloandres0@gmail.com?subject=${asunto}&body=${cuerpo}`;
   return false; // evita que el formulario se envíe por defecto
 }

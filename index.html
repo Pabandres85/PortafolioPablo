@@ -40,6 +40,7 @@
       <div class="navegacion-principal">
         <a href="#sobre-mi" class="nav-box"><span>Sobre mí</span></a>
         <a href="#competencias" class="nav-box"><span>Competencias</span></a>
+        <a href="#servicios" class="nav-box"><span>Servicios</span></a>
         <a href="#proyectos" class="nav-box"><span>Proyectos</span></a>
         <a href="#blog" class="nav-box"><span>Blog</span></a>
         <a href="#contacto" class="nav-box"><span>Contacto</span></a>
@@ -178,7 +179,7 @@
   <h2>Contacto</h2>
   <div class="contact-card">
 
-    <form class="contact-form">
+    <form class="contact-form" onsubmit="return enviarCorreo();">
       <label for="nombre">Nombre:</label>
       <input type="text" id="nombre" name="nombre" required>
 
@@ -204,10 +205,6 @@
 </section>
 
 
-<footer>
-  <p>&copy; 2025 Pablo Andres Muñoz - Ingeniero de Software Full Stack</p>
-</footer>
-
  <!-- CHATBOT -->
 <div id="chatbot-placeholder"></div>
 <script>
@@ -221,6 +218,7 @@
     });
 </script>
 
+<!-- cambio page -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const faders = document.querySelectorAll(".fade-in");
@@ -229,17 +227,25 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
+          observer.unobserve(entry.target); // Evita que se repita
         }
       });
-    }, { threshold: 0.1 });
+    }, {
+      threshold: 0.1
+    });
 
-    faders.forEach(fader => observer.observe(fader));
+    faders.forEach(fader => {
+      observer.observe(fader);
+    });
   });
 </script>
 
-
 <script src="scripts/contacto.js"></script>
+
+
+<footer>
+  <p>&copy; 2025 Pablo Andres Muñoz - Ingeniero de Software Full Stack</p>
+</footer>
 
 </body>
 </html>
