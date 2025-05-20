@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios Profesionales | Pablo Andrés Muñoz</title>
+  <link rel="icon" href="images/logopablo2.png" type="image/png">
+  <meta name="description" content="Descubre los servicios profesionales ofrecidos por Pablo Andrés Muñoz: Inteligencia Artificial, desarrollo web, mentoría técnica y soluciones a medida.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+  <header>
+    <a href="index.html#inicio">
+      <img src="images/logopablo2.png" alt="Logo Pablo">
+    </a>
+    <h1>Pablo Andres Muñoz</h1>
+    <p>Ingeniero de Software Full Stack | IA | Automatización</p>
+    <nav>
+      <div class="navegacion-principal">
+        <a href="index.html#sobre-mi" class="nav-box"><span>Sobre mí</span></a>
+        <a href="index.html#competencias" class="nav-box"><span>Competencias</span></a>
+        <a href="proyectos.html" class="nav-box"><span>Proyectos</span></a>
+        <a href="blog.html" class="nav-box"><span>Blog</span></a>
+        <a href="index.html#contacto" class="nav-box"><span>Contacto</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section fade-in">
+      <h2 style="text-align:center;">Servicios Profesionales</h2>
+
+      <!-- Servicio 1 -->
+      <div class="card service-detail">
+        <img src="images/ia-icon.png" alt="Asesoría en Inteligencia Artificial">
+        <h3>Asesoría en Inteligencia Artificial</h3>
+        <p>Te acompaño en la implementación de modelos de IA usando tecnologías como AzureML, MLflow y LLMs. Diseño soluciones personalizadas basadas en tus datos, automatizo procesos con n8n, y configuro entornos híbridos con HuggingFace o Azure para despliegue eficiente.</p>
+        <ul>
+          <li>Modelos de clasificación, clustering o recomendación.</li>
+          <li>Automatización con agentes y flujos n8n.</li>
+          <li>Evaluación y mejora de modelos existentes.</li>
+        </ul>
+        <a href="index.html#contacto" class="blog-link">Solicitar asesoría</a>
+      </div>
+
+      <!-- Servicio 2 -->
+      <div class="card service-detail">
+        <img src="images/landigpage-icon.png" alt="Landing Page Profesional">
+        <h3>Landing Page Profesional</h3>
+        <p>Diseño páginas de aterrizaje modernas y responsivas pensadas para capturar atención y facilitar el contacto. Especializado en páginas para profesionales, emprendimientos o portafolios técnicos con enfoque visual atractivo.</p>
+        <ul>
+          <li>Diseño personalizado con foco en UX/UI.</li>
+          <li>Formulario de contacto, chatbot y optimización SEO básica.</li>
+          <li>Compatible con GitHub Pages o servidores personalizados.</li>
+        </ul>
+        <a href="index.html#contacto" class="blog-link">Solicitar landing</a>
+      </div>
+
+      <!-- Servicio 3 -->
+      <div class="card service-detail">
+        <img src="images/net-icon.jpeg" alt="Desarrollo de Software">
+        <h3>Desarrollo de Software Empresarial</h3>
+        <p>Construyo soluciones robustas con tecnologías como Angular, .NET, Python y Azure. Especializado en arquitecturas modernas, APIs RESTful, automatización de procesos e integración de sistemas.</p>
+        <ul>
+          <li>Front-end en Angular 17+ con diseño dinámico.</li>
+          <li>Back-end escalables en .NET Core y FastAPI.</li>
+          <li>Despliegue en Azure, Docker y DevOps pipelines.</li>
+        </ul>
+        <a href="index.html#contacto" class="blog-link">Solicitar desarrollo</a>
+      </div>
+
+      <!-- Servicio 4 -->
+      <div class="card service-detail">
+        <img src="images/mentoria-icon.png" alt="Mentoría Educativa y Técnica">
+        <h3>Mentoría Educativa y Técnica</h3>
+        <p>Brindo acompañamiento en formación técnica para estudiantes, profesionales en transición o personas que quieren aprender sobre IA, desarrollo y automatización.</p>
+        <ul>
+          <li>Mentoría 1 a 1 o en grupo (online).</li>
+          <li>Revisión de proyectos académicos y arquitectura de código.</li>
+          <li>Material de apoyo, recursos prácticos y seguimiento continuo.</li>
+        </ul>
+        <a href="index.html#contacto" class="blog-link">Solicitar mentoría</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Chatbot embebido -->
+  <div id="chatbot-placeholder"></div>
+  <script>
+    fetch("chatbot/chatbot.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("chatbot-placeholder").innerHTML = html;
+        const script = document.createElement("script");
+        script.src = "scripts/chatbot.js";
+        document.body.appendChild(script);
+      });
+  </script>
+
+  <footer>
+    <p>&copy; 2025 Pablo Andres Muñoz - Portafolio Profesional</p>
+  </footer>
+</body>
+</html>

@@ -166,7 +166,7 @@ body {
   padding: 4rem 2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-width: 1000px;
-  width: 90%;
+  width: 83%;
 }
 
 .hero:hover {
@@ -811,6 +811,59 @@ input:focus, textarea:focus {
   text-decoration: underline;
 }
 
+
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  padding: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.project-title h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #1e1d20;
+}
+
+.project-stack {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.project-description {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.project-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #1f1f1f;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.project-btn:hover {
+  background-color: #333;
+}
+
+
 /* -------------------- SERVICIOS -------------------- */
 .services-grid {
   display: grid;
@@ -840,8 +893,10 @@ input:focus, textarea:focus {
 
 .service-detail img {
   width: 100%;
+  max-width: 490px;      /* Limita el tamaño en pantallas grandes */
+  display: block;
+  margin: 0 auto 1rem;   /* Centrada con margen inferior */
   border-radius: 12px;
-  margin-bottom: 1rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
