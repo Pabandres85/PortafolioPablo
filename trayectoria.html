@@ -2,6 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trayectoria Profesional - Pablo Andres Muñoz</title>
   <link rel="icon" href="images/logopablo2.png" type="image/png">
   <meta name="description" content="Trayectoria profesional de Pablo Andres Muñoz, ingeniero de software especializado en desarrollo web, inteligencia artificial y automatización.">
   <meta name="keywords" content="ingeniero de software, trayectoria, Pablo Andres Muñoz, desarrollo web, IA, automatización">
@@ -10,78 +12,147 @@
   <meta property="og:description" content="Conoce la experiencia y formación de Pablo en ingeniería de software, inteligencia artificial y automatización.">
   <meta property="og:image" content="images/logopablo.jpeg">
   <meta property="og:url" content="https://pabandres85.github.io/portafolio/trayectoria.html">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trayectoria Profesional - Pablo Andres Muñoz</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css">
+  <style>
+    .timeline {
+      position: relative;
+      margin: 4rem auto;
+      max-width: 900px;
+      padding-left: 2rem;
+      border-left: 3px solid #ccc;
+    }
+
+    .timeline-entry {
+      position: relative;
+      margin-bottom: 3rem;
+      padding-left: 2rem;
+    }
+
+    .timeline-entry::before {
+      content: "";
+      position: absolute;
+      left: -14px;
+      top: 0;
+      width: 14px;
+      height: 14px;
+      background: #1f1f1f;
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 0 0 0 2px #888;
+    }
+
+    .timeline-entry h3 {
+      margin: 0;
+      font-size: 1.3rem;
+      color: #1f1f1f;
+    }
+
+    .timeline-entry p {
+      margin: 0.5rem 0 0;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .timeline-entry .icon {
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
+      color: #333;
+    }
+
+    .timeline-entry strong {
+      display: inline-block;
+      margin-bottom: 0.3rem;
+    }
+
+    @media (max-width: 600px) {
+      .timeline {
+        padding-left: 1rem;
+      }
+
+      .timeline-entry {
+        padding-left: 1rem;
+      }
+
+      .timeline-entry::before {
+        left: -10px;
+        width: 10px;
+        height: 10px;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <header>
+    <div class="header-content">
+      <a href="index.html#inicio">
+        <img src="images/logopablo2.png" alt="Logo Pablo">
+      </a>
+      <h1>Trayectoria Profesional</h1>
+      <p>| Ingeniero de Sistemas - Software - IA |</p>
+      <nav>
+        <div class="navegacion-principal">
+          <a href="index.html#sobre-mi" class="nav-box"><span>Sobre mí</span></a>
+          <a href="index.html#competencias" class="nav-box"><span>Competencias</span></a>
+          <a href="index.html#blog" class="nav-box"><span>Blog</span></a>
+          <a href="index.html#contacto" class="nav-box"><span>Contacto</span></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+     
+  <main>
+    <section class="section fade-in">
+      <div class="timeline">
 
-<header>
-  <div class="header-content">
-    <a href="index.html#inicio">
-      <img src="images/logopablo2.png" alt="Logo Pablo">
-    </a>
-    <h1>Trayectoria Profesional</h1>
-    <p>| Ingeniero de Sistemas - Software - IA |</p>
-    <nav>
-      <div class="navegacion-principal">
-        <a href="index.html#sobre-mi" class="nav-box"><span>Sobre mí</span></a>
-        <a href="index.html#competencias" class="nav-box"><span>Competencias</span></a>
-        <a href="index.html#blog" class="nav-box"><span>Blog</span></a>
-        <a href="index.html#contacto" class="nav-box"><span>Contacto</span></a>
+        <div class="timeline-entry">
+          <h3>💼 Experiencia Profesional</h3>
+          <p>
+            He trabajado como desarrollador full stack en múltiples proyectos empresariales, integrando tecnologías como Angular, .NET, Python y Azure. Enfocado en construir soluciones robustas y seguras, aplico metodologías ágiles junto a herramientas modernas de automatización y despliegue continuo.
+          </p>
+        </div>
+
+        <div class="timeline-entry">
+          <h3>🎓 Formación Académica</h3>
+          <p>
+            Soy Ingeniero de Sistemas, con especialización en Gerencia de Proyectos y en Inteligencia Artificial. Actualmente curso una Maestría en Inteligencia Artificial y Ciencias de Datos en la Universidad Autónoma de Occidente (UAO). Mi formación integra habilidades en programación, estructuras de datos y pensamiento estratégico, lo que me permite implementar y liderar soluciones inteligentes orientadas a la transformación digital."
+          </p>
+        </div>
+
+        <div class="timeline-entry">
+          <h3>🤖 Automatización e IA</h3>
+          <p>
+            Integración y entrenamiento de modelos de inteligencia artificial en procesos empresariales, manejo de herramientas como n8n para automatización de flujos, AzureML para desarrollo y monitoreo de modelos supervisados y no supervisados. Optimización de procesos y toma de decisiones.
+          </p>
+        </div>
+
+        <div class="timeline-entry">
+          <h3>🚀 Liderazgo y Proyectos</h3>
+          <p>
+            Liderazgo en proyectos de transformación digital y soluciones tecnológicas. Promotor de buenas prácticas DevOps, CI/CD, y metodologías ágiles. Acompaño equipos en su evolución técnica y estratégica.
+          </p>
+        </div>
+
       </div>
-    </nav>
-  </div>
-</header>
+    </section>
+  </main>
 
-<main>
-  <section class="section">
-    <h2>Experiencia Profesional</h2>
-    <p>
-      He trabajado como desarrollador full stack en múltiples proyectos empresariales, integrando tecnologías como Angular, .NET, Python y Azure. Mi enfoque está en construir soluciones robustas, seguras y eficientes, combinando metodologías ágiles con herramientas modernas de automatización y despliegue.
-    </p>
-  </section>
+  <!-- CHATBOT -->
+  <div id="chatbot-placeholder"></div>
+  <script>
+    fetch("chatbot/chatbot.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("chatbot-placeholder").innerHTML = html;
+        const script = document.createElement("script");
+        script.src = "scripts/chatbot.js";
+        document.body.appendChild(script);
+      });
+  </script>
 
-  <section class="section">
-    <h2>Formación Académica</h2>
-    <p>
-      Soy Ingeniero de Sistemas con especialización en Gerencia de Proyectos y una segunda especialización en Inteligencia Artificial. Mi formación combina sólidas bases en programación, estructuras de datos y análisis, con estrategias de liderazgo tecnológico y pensamiento estratégico para soluciones inteligentes.
-    </p>
-  </section>
-
-  <section class="section">
-    <h2>Automatización e IA</h2>
-    <p>
-      Me especializo en la integración de modelos de inteligencia artificial supervisados y no supervisados en procesos empresariales. Uso herramientas como n8n para automatización de flujos, y Azure ML para el desarrollo y despliegue de modelos predictivos y de clasificación, optimizando operaciones de negocio.
-    </p>
-  </section>
-
-  <section class="section">
-    <h2>Liderazgo y Proyectos</h2>
-    <p>
-      He liderado iniciativas de desarrollo tecnológico y participado en la implementación de soluciones a nivel institucional, enfocadas en eficiencia, escalabilidad y transformación digital. Además, he guiado equipos en la adopción de DevOps, CI/CD y buenas prácticas de seguridad.
-    </p>
-  </section>
-</main>
-
-<!-- CHATBOT -->
-<div id="chatbot-placeholder"></div>
-<script>
-  fetch("chatbot/chatbot.html")
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById("chatbot-placeholder").innerHTML = html;
-      const script = document.createElement("script");
-      script.src = "scripts/chatbot.js";
-      document.body.appendChild(script);
-    });
-</script>
-
-<footer>
-  &copy; 2025 Pablo Andres Muñoz - Ingeniero de Software
-</footer>
-
+  <footer>
+    <p>&copy; 2025 Pablo Andres Muñoz - Ingeniero de Software</p>
+  </footer>
 </body>
 </html>
