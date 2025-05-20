@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="images/logosusy.png" type="image/png">
+  <meta name="description" content="Conoce la trayectoria profesional de Maria Susana Hurtado: psicóloga clínica con experiencia en salud mental, liderazgo en IPS y formación en gerencia en salud.">
+  <meta name="keywords" content="psicología, trayectoria, Susana Hurtado, salud mental, clínica, liderazgo">
+  <meta name="author" content="Maria Susana Hurtado">
+  <meta property="og:title" content="Trayectoria Profesional - Susana Psicología Integral">
+  <meta property="og:description" content="Conoce la experiencia de Susana como psicóloga clínica y líder en salud mental.">
+  <meta property="og:image" content="https://pabandres85.github.io/susanapsicologia/images/logosusy.png">
+  <meta property="og:url" content="https://pabandres85.github.io/susanapsicologia/trayectoria.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trayectoria Profesional - Maria Susana Hurtado</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+<header>
+  <div class="header-content">
+    <!-- Logo clicable -->
+    <a href="index.html#inicio">
+      <img src="images/logosusy.png" alt="Logo">
+    </a>
+    <h1>Trayectoria Profesional</h1>
+    <p>Psicóloga Clínica | Liderazgo en salud mental | Formación constante</p>
+    <nav>
+      <div class="navegacion-principal">
+        <a href="index.html#sobre-mi" class="nav-box"><span>Sobre mí</span></a>
+        <a href="index.html#servicios" class="nav-box"><span>Servicios</span></a>
+        <a href="trayectoria.html" class="nav-box"><span>Trayectoria</span></a>
+        <a href="blog.html" class="nav-box"><span>Blog</span></a>
+        <a href="index.html#contacto" class="nav-box"><span>Contacto</span></a>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <section class="section">
+      <h2>Experiencia Clínica</h2>
+      <p>
+        Cuento con más de 10 años de experiencia en atención psicológica individual y grupal. Actualmente,
+        desarrollo mi labor profesional en una clínica de alto nivel de complejidad, donde acompaño procesos
+        terapéuticos de pacientes con diversas problemáticas emocionales y mentales.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Formación Académica</h2>
+      <p>
+        Soy psicóloga clínica y actualmente me encuentro cursando una especialización en Gerencia en Salud.
+        Este enfoque complementa mi labor como profesional en contextos institucionales, aportando habilidades
+        administrativas y estratégicas en el ámbito de la salud mental.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Liderazgo y Gestión</h2>
+      <p>
+        Además de la atención a pacientes, lidero procesos de mejora en el área de psicología clínica dentro de la
+        institución donde trabajo. Coordino actividades psicoeducativas, promuevo estrategias de humanización y
+        colaboro activamente con equipos interdisciplinarios para el fortalecimiento del bienestar emocional de
+        los usuarios.
+      </p>
+    </section>
+  </main>
+
+  <!-- CHATBOT -->
+<div id="chatbot-placeholder"></div>
+<script>
+  fetch("chatbot/chatbot.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("chatbot-placeholder").innerHTML = html;
+      const script = document.createElement("script");
+      script.src = "scripts/chatbot.js";
+      document.body.appendChild(script);
+    });
+</script>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    &copy; 2025 Maria Susana Hurtado - Psicología Integral
+  </footer>
+
+</body>
+</html>
