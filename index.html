@@ -78,19 +78,22 @@
 </section>
 
 
-<section class="section competencias fade-in" id="competencias">
+<section class="section fade-in" id="competencias">
   <h2>Competencias</h2>
-  <div class="competencias-card-animated">
-    <div class="competencias-text">
+  <div class="about-card-animated reverse">
+    <div class="about-text">
       <p>
-        Experiencia en desarrollo web Full Stack con tecnologías como Angular, .NET y Python. 
-        Aplicación de modelos de Inteligencia Artificial, automatización de procesos con n8n, 
-        despliegue en Azure y metodologías ágiles para soluciones empresariales escalables.
+        Experiencia sólida en desarrollo web Full Stack empleando tecnologías como <strong>Angular, .NET Core, Python, Azure</strong> y <strong>n8n</strong> para la automatización de procesos. He desarrollado soluciones robustas e inteligentes basadas en modelos de <strong>Inteligencia Artificial</strong>, integrando arquitecturas escalables y modernas.
       </p>
-      <a href="#proyectos" class="btn-cv">Ver proyectos →</a>
+      <p>
+        Manejo de <strong>metodologías ágiles</strong> como <em>Scrum</em> y <em>Kanban</em>, con experiencia liderando sprints, retrospectivas y gestión de historias de usuario a través de Azure DevOps.
+      </p>
+      <p>
+        Habilidades blandas destacadas: <strong>liderazgo colaborativo, pensamiento analítico, comunicación efectiva, autonomía</strong> y <strong>adaptabilidad</strong> al cambio continuo en entornos tecnológicos dinámicos.
+      </p>
     </div>
-    <div class="competencias-img">
-      <img src="images/jsoncard.png" alt="Competencias profesionales" />
+    <div class="about-img">
+      <img src="images/jsoncard.png" alt="Tarjeta de presentación de Pablo Andrés, Ingeniero de Software" />
     </div>
   </div>
 </section>
@@ -98,21 +101,38 @@
 
 <section class="section fade-in" id="proyectos">
   <h2>Proyectos Destacados</h2>
-  <div class="services-grid">
-    <div class="card service-card">
+  <div class="projects-grid">
+
+    <!-- Proyecto 1 -->
+    <div class="project-card">
       <h3>Chatbot Multisectorial</h3>
-      <p>Desarrollado con LLMs y deployed en entorno híbrido con Azure y HuggingFace.</p>
+      <p>Chatbot desarrollado con LLMs como DeepSeek y Falcon, integrando adaptabilidad para distintos sectores como banca, salud y turismo.</p>
+      <a href="https://github.com/Pabandres85/Proyecto-LLM-deepseek" class="project-link" target="_blank">Ver más →</a>
     </div>
-    <div class="card service-card">
-      <h3>Motor de Recomendación</h3>
-      <p>Basado en clustering con MLflow y AzureML para segmentación de clientes.</p>
+
+    <!-- Proyecto 2 -->
+    <div class="project-card">
+      <h3>Detección de Neumonía con IA</h3>
+      <p>Sistema inteligente para detectar neumonía en imágenes de rayos X. Integración de pruebas unitarias y despliegue con Docker.</p>
+      <a href="https://github.com/Pabandres85/NeumoIA" class="project-link" target="_blank">Ver más →</a>
     </div>
-    <div class="card service-card">
-      <h3>Panel de Control Angular</h3>
-      <p>Menú lateral dinámico con permisos, rutas y configuración de múltiples niveles.</p>
+
+    <!-- Proyecto 3 -->
+    <div class="project-card">
+      <h3>Proyecto MLFlow + TinyBERT</h3>
+      <p>Clasificador de texto multiclase con modelos TinyBERT, BERT-Mini y DistilBERT. Métricas monitoreadas con MLflow.</p>
+      <a href="https://github.com/Pabandres85/Proyecto_MLFlow" class="project-link" target="_blank">Ver más →</a>
     </div>
+
+
+  </div>
+
+  <div style="text-align: center; margin-top: 2rem;">
+    <a href="proyectos.html" class="btn-cv">Ver proyectos completos →</a>
   </div>
 </section>
+
+
 
 <section class="section blog-preview fade-in" id="blog">
   <div class="card blog-promo">
@@ -122,40 +142,35 @@
   </div>
 </section>
 
-<section class="section contact fade-in" id="contacto">
+<section class="section fade-in" id="contacto">
   <h2>Contacto</h2>
-  <div class="card">
-    <form onsubmit="return enviarCorreo();">
-      <label for="nombre">Nombre:</label><br>
-      <input type="text" id="nombre" name="nombre" required><br><br>
+  <div class="contact-card">
 
-      <label for="correo">Correo:</label><br>
-      <input type="email" id="correo" name="correo" required><br><br>
+    <form class="contact-form">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
 
-      <label for="mensaje">Mensaje:</label><br>
-      <textarea id="mensaje" name="mensaje" rows="5" required></textarea><br><br>
+      <label for="correo">Correo:</label>
+      <input type="email" id="correo" name="correo" required>
 
-      <button type="submit">Enviar mensaje</button>
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+      <button type="submit" class="btn-cv">Enviar mensaje</button>
     </form>
-    <hr style="margin: 2rem 0;">
-    <h3>Redes profesionales:</h3>
-    <div class="social-icons">
-      <a href="https://wa.me/573136456560" target="_blank" title="WhatsApp">
-        <img src="images/whatsapp-icon.png" alt="WhatsApp">
-      </a>
-      <a href="https://www.linkedin.com/in/pablo-munoz" target="_blank" title="LinkedIn">
-        <img src="images/linkedin-icon.png" alt="LinkedIn">
-      </a>
-      <a href="https://github.com/Pabandres85" target="_blank" title="GitHub">
-        <img src="images/github-icon.png" alt="GitHub">
-      </a>
-      <a href="mailto:pablo.dev.ai@gmail.com">
-        <img src="images/gmail-Logo.png" alt="Gmail">
-        pablo.dev.ai@gmail.com
-      </a>
+
+    <hr>
+
+    <div class="social-links">
+      <p>También Contactame:</p>
+      <a href="https://wa.me/573217476850" target="_blank"><img src="images/whatsapp-icon.png" alt="WhatsApp"></a>
+      <a href="https://www.linkedin.com/in/pablo-andres-munoz-6281791bb" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
+      <a href="https://github.com/Pabandres85" target="_blank"><img src="images/github-icon.png" alt="GitHub"></a>
+      <a href="mailto:pablo.dev.ai@gmail.com"><img src="images/gmail-Logo.png" alt="Gmail"></a>
     </div>
   </div>
 </section>
+
 
 <footer>
   <p>&copy; 2025 Pablo Andres Muñoz - Ingeniero de Software Full Stack</p>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="images/logopablo2.png" type="image/png">
+  <meta name="description" content="Explora los proyectos profesionales de Pablo Andres Muñoz: desarrollo web, IA, automatización de procesos y soluciones empresariales en la nube.">
+  <meta name="keywords" content="proyectos, desarrollo software, Pablo Andres Muñoz, Angular, .NET, Python, Azure, inteligencia artificial, automatización">
+  <meta name="author" content="Pablo Andres Muñoz">
+  <meta property="og:title" content="Proyectos - Pablo Andres Muñoz">
+  <meta property="og:description" content="Conoce proyectos desarrollados con IA, Angular, .NET y soluciones cloud para empresas.">
+  <meta property="og:image" content="images/logopablo.jpeg">
+  <meta property="og:url" content="https://pabandres85.github.io/portafolio/proyectos.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos | Pablo Andres Muñoz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+  <header>
+    <a href="index.html#inicio">
+      <img src="images/logopablo2.png" alt="Logo Pablo">
+    </a>
+    <h1>Pablo Andres Muñoz</h1>
+    <p>Ingeniero de Software Full Stack | IA | Automatización</p>
+    <nav>
+      <div class="navegacion-principal">
+        <a href="index.html#sobre-mi" class="nav-box"><span>Sobre mí</span></a>
+        <a href="index.html#competencias" class="nav-box"><span>Competencias</span></a>
+        <a href="proyectos.html" class="nav-box"><span>Proyectos</span></a>
+        <a href="blog.html" class="nav-box"><span>Blog</span></a>
+        <a href="index.html#contacto" class="nav-box"><span>Contacto</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section fade-in">
+      <h2 style="text-align:center;">Proyectos en Detalle</h2>
+
+      <div class="card service-detail">
+        <img src="images/chatbot.png" alt="Chatbot Multisectorial">
+        <h3>Chatbot Multisectorial</h3>
+        <p>
+          Chatbot desarrollado con LLMs como DeepSeek y Falcon, integrando adaptabilidad para distintos sectores como banca, salud y turismo. Permite a las empresas personalizar respuestas y conectarse con APIs propias. Desplegado con Azure y HuggingFace, cuenta con interfaz de selección de empresa y modo oscuro.
+        </p>
+        <a href="https://github.com/Pabandres85/Proyecto-LLM-deepseek" class="blog-link" target="_blank">Ver en GitHub</a>
+      </div>
+
+
+      <div class="card service-detail">
+        <img src="images/neumonia.jpg" alt="Detector de Neumonía">
+        <h3>Detector de Neumonía por IA</h3>
+        <p>
+          Sistema basado en inteligencia artificial para detectar neumonía en radiografías de tórax. Incluye despliegue con Docker y pruebas unitarias para asegurar fiabilidad. Desarrollado con Python y bibliotecas de procesamiento de imagen médica.
+        </p>
+        <a href="https://github.com/Pabandres85/NeumoIA" class="blog-link" target="_blank">Ver en GitHub</a>
+      </div>
+
+      <div class="card service-detail">
+        <img src="images/monitor-ml.png" alt="Monitor de Modelos BERT">
+        <h3>Clasificador con TinyBERT + MLflow</h3>
+        <p>
+          Proyecto de clasificación de textos usando modelos TinyBERT, BERT-Mini y DistilBERT. Monitoriza métricas clave (accuracy, F1-score, precision) mediante MLflow. Evalúa rendimiento comparado en noticias usando dataset AG News.
+        </p>
+        <a href="https://github.com/Pabandres85/Proyecto_MLFlow" class="blog-link" target="_blank">Ver en GitHub</a>
+      </div>
+
+      <div class="card service-detail">
+        <img src="images/susanapsico.png" alt="Landing Page Psicología">
+        <h3>Landing Page Para Profesionales</h3>
+        <p>
+          Diseño de landing page moderna, responsive y con chatbot embebido para profesionales que quieran hacerse notar en la red. Incluye blog, formularios de contacto y enfoque en experiencia de usuario con estilo profesional.
+        </p>
+        <a href="https://github.com/Pabandres85/susanapsicologia" class="blog-link" target="_blank">Ver en GitHub</a>
+      </div>
+
+    </section>
+  </main>
+
+  <div id="chatbot-placeholder"></div>
+  <script>
+    fetch("chatbot/chatbot.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("chatbot-placeholder").innerHTML = html;
+        const script = document.createElement("script");
+        script.src = "scripts/chatbot.js";
+        document.body.appendChild(script);
+      });
+  </script>
+
+  <footer>
+    <p>&copy; 2025 Pablo Andres Muñoz - Portafolio Profesional</p>
+  </footer>
+</body>
+</html>
+
