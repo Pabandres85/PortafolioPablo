@@ -1,3 +1,123 @@
+/* =============================
+   MEDIA QUERIES CONSOLIDADAS
+   ============================= */
+
+@media (max-width: 1024px) {
+  .hero-content {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-texto h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero-texto p {
+    margin: 0.5rem auto 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-card-animated,
+  .competencias-card-animated {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-img,
+  .competencias-img {
+    max-width: 180px;
+    margin: 1rem auto;
+  }
+
+  .about-text p,
+  .competencias-text p {
+    text-align: center;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  header img {
+    height: 90px;
+    width: 90px;
+  }
+
+  .nav-box {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .tech-icons {
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .tech-icons img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .chatbot-box {
+    width: 90vw;
+    right: 5vw;
+    left: 5vw;
+    bottom: 80px;
+    max-height: 80vh;
+  }
+
+  .chatbot-toggle {
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .chatbot-toggle span {
+    font-size: 10px;
+  }
+
+  .chatbot-options button {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+  }
+
+  .chatbot-header {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .chatbot-messages {
+    font-size: 0.85rem;
+    padding: 1rem;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
+
+  .hero-imagen img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .service-box img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 /* -------------------- RESET Y BASE -------------------- */
 html {
   scroll-behavior: smooth;
@@ -123,29 +243,6 @@ body {
   transform: scale(1.03);
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .hero-content {
-    flex-direction: column-reverse;
-    align-items: center;
-    text-align: center;
-  }
-
-  .hero-texto h1 {
-    font-size: 1.7rem;
-  }
-
-  .hero-texto h1::after {
-    bottom: -4px;
-  }
-
-  .hero-texto p {
-    margin: 0.5rem auto 0;
-  }
-}
-
-
-
 /* -------------------- HEADER Y NAV -------------------- */
 header {
   background-color: #1f1f1f; /* fondo oscuro profesional */
@@ -257,18 +354,6 @@ header a {
   white-space: nowrap;
 }
 
-@media (max-width: 480px) {
-  .tech-icons img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .tech-icons {
-    gap: 12px;
-  }
-}
-
-
 
 /* Navegación */
 nav {
@@ -363,6 +448,47 @@ input:focus, textarea:focus {
   border-color: #555;
   outline: none;
   box-shadow: 0 0 5px rgba(80, 80, 80, 0.3); /* sombreado sutil en gris */
+}
+
+/* === SERVICIOS PROFESIONALES === */
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.service-box {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+.service-box img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.service-box h3 {
+  font-size: 1.2rem;
+  color: #1e1d20;
+  margin-bottom: 0.5rem;
+}
+
+.service-box p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
 }
 
 /* -------------------- WHATSAPP -------------------- */
@@ -693,17 +819,6 @@ input:focus, textarea:focus {
   padding: 2rem 0;
 }
 
-@media (min-width: 768px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .services-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
 
 .card {
   background: rgba(0, 0, 0, 0.05);
@@ -838,15 +953,6 @@ input:focus, textarea:focus {
 
 /*-------------responsivehatbot----------*/
 
-@media (max-width: 480px) {
-  .chatbot-box {
-    width: 90vw;
-    right: 5vw;
-    left: 5vw;
-    bottom: 80px;
-    max-height: 80vh;
-  }
-
   .chatbot-toggle {
     padding: 10px;
     font-size: 18px;
@@ -870,7 +976,7 @@ input:focus, textarea:focus {
     font-size: 0.85rem;
     padding: 1rem;
   }
-}
+
 
 /* =============================
    SECCIÓN: SOBRE MÍ
@@ -971,25 +1077,6 @@ input:focus, textarea:focus {
   transform: scale(1.02);
 }
 
-/* =============================
-   RESPONSIVE
-   ============================= */
-@media (max-width: 768px) {
-  .about-card-animated {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-
-  .about-img {
-    max-width: 180px;
-    margin-top: 1rem;
-  }
-
-  .about-text p {
-    text-align: center;
-  }
-}
-
 
 /* =============================
    SECCIÓN: COMPETENCIAS
@@ -1040,23 +1127,6 @@ input:focus, textarea:focus {
   opacity: 1;
   transform: translateX(0);
 }
-
-@media (max-width: 768px) {
-  .competencias-card-animated {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .competencias-img {
-    max-width: 180px;
-    margin: 1rem auto;
-  }
-
-  .competencias-text p {
-    text-align: center;
-  }
-}
-
 
 
 /*   */
