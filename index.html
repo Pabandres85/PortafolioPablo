@@ -11,6 +11,8 @@
   <meta property="og:image" content="images/logopablo.jpeg">
   <meta property="og:url" content="https://pabandres85.github.io/portafolio">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#ffffff">
   <title>Pablo Andres Muñoz | Ingeniero de Software Full Stack</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css">
@@ -287,6 +289,30 @@
 
 <script src="scripts/contacto.js"></script>
 
+<!-- Botón Volver Arriba -->
+<button id="scrollToTop" aria-label="Volver arriba" style="display: none;">
+  ↑
+</button>
+
+<script>
+  // Script para el botón de volver arriba
+  const scrollToTopButton = document.getElementById('scrollToTop');
+  
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      scrollToTopButton.style.display = 'block';
+    } else {
+      scrollToTopButton.style.display = 'none';
+    }
+  });
+  
+  scrollToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
 
 <footer>
   <p>&copy; 2025 Pablo Andres Muñoz - Ingeniero de Software Full Stack</p>
