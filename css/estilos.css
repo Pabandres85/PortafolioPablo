@@ -47,6 +47,13 @@
     height: 35px;
     font-size: 18px;
   }
+
+  #language-switcher {
+    top: 10px;
+    right: 10px;
+    padding: 6px 10px;
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1512,4 +1519,44 @@ a {
   font-size: 0.85rem;
   color: #666;
   margin-top: 0.5rem;
+}
+
+/* =============================
+   LANGUAGE SWITCHER
+   ============================= */
+#language-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #1f1f1f;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 1001;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#language-switcher:hover {
+  background: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#language-switcher:focus {
+  outline: 3px solid #007bff;
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  #language-switcher {
+    top: 10px;
+    right: 10px;
+    padding: 6px 10px;
+    font-size: 12px;
+  }
 }

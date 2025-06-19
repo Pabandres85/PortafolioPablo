@@ -17,6 +17,11 @@
 </head>
 
 <body>
+  <!-- Language Switcher -->
+  <button id="language-switcher" onclick="changeLanguage(currentLanguage === 'es' ? 'en' : 'es')" aria-label="Cambiar idioma">
+    EN
+  </button>
+
   <header>
     <a href="index.html#inicio">
       <img src="images/logopablo2.png" alt="Logo Pablo">
@@ -25,25 +30,26 @@
     <p>Ingeniero de Software Full Stack | IA | Automatización</p>
     <nav>
       <div class="navegacion-principal">
-        <a href="index.html#sobre-mi" class="nav-box"><span>Sobre mí</span></a>
-        <a href="index.html#competencias" class="nav-box"><span>Competencias</span></a>
-         <a href="index.html#servicios" class="nav-box"><span>Servicios</span></a>
-        <a href="blog.html" class="nav-box"><span>Blog</span></a>
-        <a href="index.html#contacto" class="nav-box"><span>Contacto</span></a>
+        <a href="index.html#sobre-mi" class="nav-box"><span data-translate="nav-sobre-mi">Sobre mí</span></a>
+        <a href="index.html#competencias" class="nav-box"><span data-translate="nav-competencias">Competencias</span></a>
+         <a href="index.html#servicios" class="nav-box"><span data-translate="nav-servicios">Servicios</span></a>
+        <a href="blog.html" class="nav-box"><span data-translate="nav-blog">Blog</span></a>
+        <a href="index.html#contacto" class="nav-box"><span data-translate="nav-contacto">Contacto</span></a>
       </div>
     </nav>
   </header>
 
   <main>
     <section class="section fade-in">
-      <h2 style="text-align:center;">Proyectos en Detalle</h2>
+      <h2 style="text-align:center;" data-translate="projects-detail-title">Proyectos en Detalle</h2>
 
       <div class="card service-detail">
         <img src="images/chatbot.png" alt="Chatbot Multisectorial">
-        <h3>Chatbot Multisectorial con DeepSeek</h3>
-        <p>
+        <h3 data-translate="project-chatbot-title">Chatbot Multisectorial con DeepSeek</h3>
+        <p data-translate="project-chatbot-detail">
           Plataforma adaptable que permite a empresas ofrecer servicio al cliente personalizado mediante un modelo LLM alojado localmente con DeepSeek. Incluye interfaz moderna con modo oscuro, analítica de conversaciones, gestión de empresas y pruebas unitarias. Desplegado en LM Studio como API local.
-        <a href="https://github.com/Pabandres85/Proyecto-LLM-deepseek" class="blog-link" target="_blank">Ver en GitHub</a>
+        </p>
+        <a href="https://github.com/Pabandres85/Proyecto-LLM-deepseek" class="blog-link" target="_blank" data-translate="project-github">Ver en GitHub</a>
       </div>
 
       <div class="card service-detail">
@@ -53,20 +59,20 @@
             <img src="images/MCP-proyect3.png" alt="Vista 3 MCP_IA" style="width: 48%;">
             <img src="images/MCP-proyect4.png" alt="Vista 4 MCP_IA" style="width: 48%;">
           </div>
-          <h3>MCP_IA – IA Local con Análisis Futbolístico</h3>
-          <p>
-            Plataforma desarrollada bajo la arquitectura <strong>Model Context Protocol (MCP)</strong>, que integra un modelo LLM local ejecutado desde LM Studio con una interfaz web en Streamlit y un bot de Telegram. Permite realizar predicciones, análisis de rendimiento y visualización avanzada de datos en fútbol. Incluye panel de métricas, exportación en PDF, y lógica de conversación impulsada por contexto estructurado.
+          <h3 data-translate="project-mcp-title">MCP_IA – IA Local con Análisis Futbolístico</h3>
+          <p data-translate="project-mcp-detail">
+            Plataforma desarrollada bajo la arquitectura Model Context Protocol (MCP), que integra un modelo LLM local ejecutado desde LM Studio con una interfaz web en Streamlit y un bot de Telegram. Permite realizar predicciones, análisis de rendimiento y visualización avanzada de datos en fútbol. Incluye panel de métricas, exportación en PDF, y lógica de conversación impulsada por contexto estructurado.
           </p>
-          <a href="https://github.com/Pabandres85/MCP_IA" class="blog-link" target="_blank">Ver en GitHub</a>
+          <a href="https://github.com/Pabandres85/MCP_IA" class="blog-link" target="_blank" data-translate="project-github">Ver en GitHub</a>
            </div>
 
       <div class="card service-detail">
         <img src="images/neumonia.jpg" alt="Detector de Neumonía">
-        <h3>Detector de Neumonía por IA</h3>
-        <p>
+        <h3 data-translate="project-health-title">Detector de Neumonía por IA</h3>
+        <p data-translate="project-health-detail">
           Sistema basado en inteligencia artificial para detectar neumonía en radiografías de tórax. Incluye despliegue con Docker y pruebas unitarias para asegurar fiabilidad. Desarrollado con Python y bibliotecas de procesamiento de imagen médica.
         </p>
-        <a href="https://github.com/Pabandres85/NeumoIA" class="blog-link" target="_blank">Ver en GitHub</a>
+        <a href="https://github.com/Pabandres85/NeumoIA" class="blog-link" target="_blank" data-translate="project-github">Ver en GitHub</a>
       </div>
 
      <div class="card service-detail"> 
@@ -76,41 +82,41 @@
             <img src="images/AutomIA3.png" alt="Automatización3 Empresarial IA"style="width: 49%;">
             <img src="images/AutomIA4.png" alt="Automatización4 Empresarial IA"style="width: 49%;">
             </div>
-       <h3>Plataforma de Automatización Empresarial con IA</h3>
-      <p>
-       Proyecto integral que conecta flujos inteligentes en <strong>n8n</strong> con un backend <strong>FastAPI</strong> y visualización en <strong>Streamlit</strong>. Utiliza una base de datos <strong>PostgreSQL</strong> compartida y un modelo <strong>LLM local</strong> para clasificación automática, monitoreo y análisis de datos empresariales. Primera fase operativa: atención al cliente inteligente.
+       <h3 data-translate="project-automation-title">Plataforma de Automatización Empresarial con IA</h3>
+      <p data-translate="project-automation-detail">
+       Proyecto integral que conecta flujos inteligentes en n8n con un backend FastAPI y visualización en Streamlit. Utiliza una base de datos PostgreSQL compartida y un modelo LLM local para clasificación automática, monitoreo y análisis de datos empresariales. Primera fase operativa: atención al cliente inteligente.
      </p>
-     <a href="https://github.com/Pabandres85/LLM_N8N" class="blog-link" target="_blank">Ver en GitHub</a>
+     <a href="https://github.com/Pabandres85/LLM_N8N" class="blog-link" target="_blank" data-translate="project-github">Ver en GitHub</a>
     </div>
 
 
       <div class="card service-detail">
         <img src="images/monitor-ml.png" alt="Monitor de Modelos BERT">
-        <h3>Clasificador con TinyBERT + MLflow</h3>
-        <p>
+        <h3 data-translate="project-mlflow-title">Clasificador con TinyBERT + MLflow</h3>
+        <p data-translate="project-mlflow-detail">
           Proyecto de clasificación de textos usando modelos TinyBERT, BERT-Mini y DistilBERT. Monitoriza métricas clave (accuracy, F1-score, precision) mediante MLflow. Evalúa rendimiento comparado en noticias usando dataset AG News.
         </p>
-        <a href="https://github.com/Pabandres85/Proyecto_MLFlow" class="blog-link" target="_blank">Ver en GitHub</a>
+        <a href="https://github.com/Pabandres85/Proyecto_MLFlow" class="blog-link" target="_blank" data-translate="project-github">Ver en GitHub</a>
       </div>
 
       
       <div class="card service-detail">
         <img src="images/rioCauca.png" alt="Rio Cauca Valle del Cauca">
-        <h3>Proyecto con Ciencia de Datos: Calidad del Agua del Río Cauca en el Valle del Cauca (Colombia)</h3>
-        <p>
+        <h3 data-translate="project-rio-title">Proyecto con Ciencia de Datos: Calidad del Agua del Río Cauca en el Valle del Cauca (Colombia)</h3>
+        <p data-translate="project-rio-detail">
           Este proyecto analiza datos públicos sobre la calidad del agua del Río Cauca, aplicando técnicas de limpieza, análisis exploratorio, visualización interactiva y modelado predictivo con inteligencia artificial. Está diseñado para funcionar tanto en entornos locales (con Docker) como en la nube mediante Streamlit Cloud.
         </p>
-        <a href="https://riocaucavalle-pabloandres.streamlit.app/" class="blog-link" target="_blank">Ver en Streamlit Cloud</a>
-        <a href="https://github.com/Pabandres85/rioCaucaValle" class="blog-link" target="_blank">Ver en GitHub</a>
+        <a href="https://riocaucavalle-pabloandres.streamlit.app/" class="blog-link" target="_blank" data-translate="project-streamlit">Ver en Streamlit Cloud</a>
+        <a href="https://github.com/Pabandres85/rioCaucaValle" class="blog-link" target="_blank" data-translate="project-github">Ver en GitHub</a>
       </div>
 
       <div class="card service-detail">
         <img src="images/susanapsico.png" alt="Landing Page Psicología">
-        <h3>Landing Page Para Profesionales</h3>
-        <p>
+        <h3 data-translate="project-landing-title">Landing Page Para Profesionales</h3>
+        <p data-translate="project-landing-detail">
           Diseño de landing page moderna, responsive y con chatbot embebido para profesionales que quieran hacerse notar en la red. Incluye blog, formularios de contacto y enfoque en experiencia de usuario con estilo profesional.
         </p>
-        <a href="https://pabandres85.github.io/susanapsicologia/" class="blog-link" target="_blank">Ver en GitHub</a>
+        <a href="https://pabandres85.github.io/susanapsicologia/" class="blog-link" target="_blank" data-translate="project-github">Ver en GitHub</a>
       </div>
 
     </section>
@@ -128,8 +134,11 @@
       });
   </script>
 
+  <script src="scripts/translations.js"></script>
+  <script src="scripts/language-switcher.js"></script>
+
   <footer>
-    <p>&copy; 2025 Pablo Andres Muñoz - Portafolio Profesional</p>
+    <p data-translate="footer-text">&copy; 2025 Pablo Andres Muñoz - Portafolio Profesional</p>
   </footer>
 </body>
 </html>

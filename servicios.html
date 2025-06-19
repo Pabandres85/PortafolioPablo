@@ -11,6 +11,11 @@
 </head>
 
 <body>
+  <!-- Language Switcher -->
+  <button id="language-switcher" onclick="changeLanguage(currentLanguage === 'es' ? 'en' : 'es')" aria-label="Cambiar idioma">
+    EN
+  </button>
+
   <header>
     <a href="index.html#inicio">
       <img src="images/logopablo2.png" alt="Logo Pablo">
@@ -19,69 +24,69 @@
     <p>Ingeniero de Software Full Stack | IA | Automatización</p>
     <nav>
       <div class="navegacion-principal">
-        <a href="index.html#sobre-mi" class="nav-box"><span>Sobre mí</span></a>
-        <a href="index.html#competencias" class="nav-box"><span>Competencias</span></a>
-        <a href="proyectos.html" class="nav-box"><span>Proyectos</span></a>
-        <a href="blog.html" class="nav-box"><span>Blog</span></a>
-        <a href="index.html#contacto" class="nav-box"><span>Contacto</span></a>
+        <a href="index.html#sobre-mi" class="nav-box"><span data-translate="nav-sobre-mi">Sobre mí</span></a>
+        <a href="index.html#competencias" class="nav-box"><span data-translate="nav-competencias">Competencias</span></a>
+        <a href="proyectos.html" class="nav-box"><span data-translate="nav-proyectos">Proyectos</span></a>
+        <a href="blog.html" class="nav-box"><span data-translate="nav-blog">Blog</span></a>
+        <a href="index.html#contacto" class="nav-box"><span data-translate="nav-contacto">Contacto</span></a>
       </div>
     </nav>
   </header>
 
   <main>
     <section class="section fade-in">
-      <h2 style="text-align:center;">Servicios Profesionales</h2>
+      <h2 style="text-align:center;" data-translate="services-title">Servicios Profesionales</h2>
 
       <!-- Servicio 1 -->
       <div class="card service-detail">
         <img src="images/ia-icon.png" alt="Asesoría en Inteligencia Artificial">
-        <h3>Asesoría en Inteligencia Artificial</h3>
-        <p>Te acompaño en la implementación de modelos de IA usando tecnologías como AzureML, MLflow y LLMs. Diseño soluciones personalizadas basadas en tus datos, automatizo procesos con n8n, y configuro entornos híbridos con HuggingFace o Azure para despliegue eficiente.</p>
+        <h3 data-translate="service-ia-title">Asesoría en Inteligencia Artificial</h3>
+        <p data-translate="service-ia-detail">Te acompaño en la implementación de modelos de IA usando tecnologías como AzureML, MLflow y LLMs. Diseño soluciones personalizadas basadas en tus datos, automatizo procesos con n8n, y configuro entornos híbridos con HuggingFace o Azure para despliegue eficiente.</p>
         <ul>
-          <li>Modelos de clasificación, clustering o recomendación.</li>
-          <li>Automatización con agentes y flujos n8n.</li>
-          <li>Evaluación y mejora de modelos existentes.</li>
+          <li data-translate="service-ia-feature-1">Modelos de clasificación, clustering o recomendación.</li>
+          <li data-translate="service-ia-feature-2">Automatización con agentes y flujos n8n.</li>
+          <li data-translate="service-ia-feature-3">Evaluación y mejora de modelos existentes.</li>
         </ul>
-        <a href="index.html#contacto" class="blog-link">Solicitar asesoría</a>
+        <a href="index.html#contacto" class="blog-link" data-translate="service-request">Solicitar asesoría</a>
       </div>
 
       <!-- Servicio 2 -->
       <div class="card service-detail">
         <img src="images/landigpage-icon.png" alt="Landing Page Profesional">
-        <h3>Landing Page Profesional</h3>
-        <p>Diseño páginas de aterrizaje modernas y responsivas pensadas para capturar atención y facilitar el contacto. Especializado en páginas para profesionales, emprendimientos o portafolios técnicos con enfoque visual atractivo.</p>
+        <h3 data-translate="service-landing-title">Landing Page Profesional</h3>
+        <p data-translate="service-landing-detail">Diseño páginas de aterrizaje modernas y responsivas pensadas para capturar atención y facilitar el contacto. Especializado en páginas para profesionales, emprendimientos o portafolios técnicos con enfoque visual atractivo.</p>
         <ul>
-          <li>Diseño personalizado con foco en UX/UI.</li>
-          <li>Formulario de contacto, chatbot y optimización SEO básica.</li>
-          <li>Compatible con GitHub Pages o servidores personalizados.</li>
+          <li data-translate="service-landing-feature-1">Diseño personalizado con foco en UX/UI.</li>
+          <li data-translate="service-landing-feature-2">Formulario de contacto, chatbot y optimización SEO básica.</li>
+          <li data-translate="service-landing-feature-3">Compatible con GitHub Pages o servidores personalizados.</li>
         </ul>
-        <a href="index.html#contacto" class="blog-link">Solicitar landing</a>
+        <a href="index.html#contacto" class="blog-link" data-translate="service-request">Solicitar landing</a>
       </div>
 
       <!-- Servicio 3 -->
       <div class="card service-detail">
         <img src="images/net-icon.jpeg" alt="Desarrollo de Software">
-        <h3>Desarrollo de Software Empresarial</h3>
-        <p>Construyo soluciones robustas con tecnologías como Angular, .NET, Python y Azure. Especializado en arquitecturas modernas, APIs RESTful, automatización de procesos e integración de sistemas.</p>
+        <h3 data-translate="service-software-title">Desarrollo de Software Empresarial</h3>
+        <p data-translate="service-software-detail">Construyo soluciones robustas con tecnologías como Angular, .NET, Python y Azure. Especializado en arquitecturas modernas, APIs RESTful, automatización de procesos e integración de sistemas.</p>
         <ul>
-          <li>Front-end en Angular 17+ con diseño dinámico.</li>
-          <li>Back-end escalables en .NET Core y FastAPI.</li>
-          <li>Despliegue en Azure, Docker y DevOps pipelines.</li>
+          <li data-translate="service-software-feature-1">Front-end en Angular 17+ con diseño dinámico.</li>
+          <li data-translate="service-software-feature-2">Back-end escalables en .NET Core y FastAPI.</li>
+          <li data-translate="service-software-feature-3">Despliegue en Azure, Docker y DevOps pipelines.</li>
         </ul>
-        <a href="index.html#contacto" class="blog-link">Solicitar desarrollo</a>
+        <a href="index.html#contacto" class="blog-link" data-translate="service-request">Solicitar desarrollo</a>
       </div>
 
       <!-- Servicio 4 -->
       <div class="card service-detail">
         <img src="images/mentoria-icon.png" alt="Mentoría Educativa y Técnica">
-        <h3>Mentoría Educativa y Técnica</h3>
-        <p>Brindo acompañamiento en formación técnica para estudiantes, profesionales en transición o personas que quieren aprender sobre IA, desarrollo y automatización.</p>
+        <h3 data-translate="service-mentoria-title">Mentoría Educativa y Técnica</h3>
+        <p data-translate="service-mentoria-detail">Brindo acompañamiento en formación técnica para estudiantes, profesionales en transición o personas que quieren aprender sobre IA, desarrollo y automatización.</p>
         <ul>
-          <li>Mentoría 1 a 1 o en grupo (online).</li>
-          <li>Revisión de proyectos académicos y arquitectura de código.</li>
-          <li>Material de apoyo, recursos prácticos y seguimiento continuo.</li>
+          <li data-translate="service-mentoria-feature-1">Mentoría 1 a 1 o en grupo (online).</li>
+          <li data-translate="service-mentoria-feature-2">Revisión de proyectos académicos y arquitectura de código.</li>
+          <li data-translate="service-mentoria-feature-3">Material de apoyo, recursos prácticos y seguimiento continuo.</li>
         </ul>
-        <a href="index.html#contacto" class="blog-link">Solicitar mentoría</a>
+        <a href="index.html#contacto" class="blog-link" data-translate="service-request">Solicitar mentoría</a>
       </div>
     </section>
   </main>
@@ -99,8 +104,11 @@
       });
   </script>
 
+  <script src="scripts/translations.js"></script>
+  <script src="scripts/language-switcher.js"></script>
+
   <footer>
-    <p>&copy; 2025 Pablo Andres Muñoz - Portafolio Profesional</p>
+    <p data-translate="footer-text">&copy; 2025 Pablo Andres Muñoz - Portafolio Profesional</p>
   </footer>
 </body>
 </html>

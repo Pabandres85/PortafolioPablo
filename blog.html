@@ -17,44 +17,49 @@
 </head>
 <body>
 
+  <!-- Language Switcher -->
+  <button id="language-switcher" onclick="changeLanguage(currentLanguage === 'es' ? 'en' : 'es')" aria-label="Cambiar idioma">
+    EN
+  </button>
+
   <header>
     <a href="index.html#inicio">
       <img src="images/logopablo2.png" alt="Logo Pablo">
     </a>
-    <h1>Blog de Tecnología</h1>
-    <p>Tendencias, análisis y reflexiones sobre el mundo digital</p>
+    <h1 data-translate="blog-page-title">Blog de Tecnología</h1>
+    <p data-translate="blog-page-subtitle">Tendencias, análisis y reflexiones sobre el mundo digital</p>
     <nav>
       <div class="navegacion-principal">
-        <a href="index.html#sobre-mi" class="nav-box"><span>Sobre mí</span></a>
-        <a href="index.html#competencias" class="nav-box"><span>Competencias</span></a>
-        <a href="index.html#proyectos" class="nav-box"><span>Proyectos</span></a>
-        <a href="index.html#contacto" class="nav-box"><span>Contacto</span></a>
+        <a href="index.html#sobre-mi" class="nav-box"><span data-translate="nav-sobre-mi">Sobre mí</span></a>
+        <a href="index.html#competencias" class="nav-box"><span data-translate="nav-competencias">Competencias</span></a>
+        <a href="index.html#proyectos" class="nav-box"><span data-translate="nav-proyectos">Proyectos</span></a>
+        <a href="index.html#contacto" class="nav-box"><span data-translate="nav-contacto">Contacto</span></a>
       </div>
     </nav>
   </header>
 
   <section class="section blog">
-    <h2>Artículos Recientes</h2>
+    <h2 data-translate="blog-recent-articles">Artículos Recientes</h2>
     <div class="blog-grid">
 
       <article class="card blog-article">
-        <h3>Inteligencia Artificial Autónoma: El Futuro de la Automatización</h3>
-        <p>Descubre cómo la IA está evolucionando hacia sistemas más autónomos y sus implicaciones.</p>
-        <button class="toggle-btn" onclick="toggleDetails(this)">Leer más →</button>
+        <h3 data-translate="blog-article-1-title">Inteligencia Artificial Autónoma: El Futuro de la Automatización</h3>
+        <p data-translate="blog-article-1-summary">Descubre cómo la IA está evolucionando hacia sistemas más autónomos y sus implicaciones.</p>
+        <button class="toggle-btn" onclick="toggleDetails(this)" data-translate="blog-read-more">Leer más →</button>
         <div class="article-details">
-          <p>La inteligencia artificial (IA) está evolucionando hacia sistemas más autónomos capaces de operar con mínima intervención humana. Estos avances permiten que la IA tome decisiones en tiempo real, optimizando procesos en sectores como la logística, la medicina y las finanzas. Sin embargo, esta autonomía también plantea desafíos éticos y de privacidad que deben ser abordados para garantizar un uso responsable de la tecnología.</p>
-          <p><a href="https://www.gartner.com/en/articles/top-technology-trends-2025" target="_blank">Fuente: Gartner</a></p>
+          <p data-translate="blog-article-1-content">La inteligencia artificial (IA) está evolucionando hacia sistemas más autónomos capaces de operar con mínima intervención humana. Estos avances permiten que la IA tome decisiones en tiempo real, optimizando procesos en sectores como la logística, la medicina y las finanzas. Sin embargo, esta autonomía también plantea desafíos éticos y de privacidad que deben ser abordados para garantizar un uso responsable de la tecnología.</p>
+          <p><a href="https://www.gartner.com/en/articles/top-technology-trends-2025" target="_blank" data-translate="blog-source">Fuente: Gartner</a></p>
         </div>
       </article>
 
       <article class="card blog-article">
-        <h3>Ciberseguridad en la Era de la Interconexión</h3>
-        <p>La seguridad digital se reinventa con IA, cifrado cuántico y nuevas amenazas globales.</p>
-        <button class="toggle-btn" onclick="toggleDetails(this)">Leer más →</button>
+        <h3 data-translate="blog-article-2-title">Ciberseguridad en la Era de la Interconexión</h3>
+        <p data-translate="blog-article-2-summary">La seguridad digital se reinventa con IA, cifrado cuántico y nuevas amenazas globales.</p>
+        <button class="toggle-btn" onclick="toggleDetails(this)" data-translate="blog-read-more">Leer más →</button>
         <div class="article-details">
-          <p>Con la creciente interconexión de dispositivos y sistemas, la ciberseguridad se ha convertido en una prioridad. La IA desempeña un papel dual: mientras los atacantes la utilizan para lanzar ciberataques más sofisticados, los defensores emplean herramientas de IA para anticipar, identificar y mitigar amenazas en tiempo real.</p>
-          <p>Además, tecnologías emergentes como el cifrado cuántico ofrecen niveles de seguridad imposibles de romper con tecnologías actuales, protegiendo infraestructuras críticas como hospitales y redes de transporte.</p>
-          <p><a href="https://www.gartner.com/en/articles/top-technology-trends-2025" target="_blank">Fuente: Gartner</a></p>
+          <p data-translate="blog-article-2-content-1">Con la creciente interconexión de dispositivos y sistemas, la ciberseguridad se ha convertido en una prioridad. La IA desempeña un papel dual: mientras los atacantes la utilizan para lanzar ciberataques más sofisticados, los defensores emplean herramientas de IA para anticipar, identificar y mitigar amenazas en tiempo real.</p>
+          <p data-translate="blog-article-2-content-2">Además, tecnologías emergentes como el cifrado cuántico ofrecen niveles de seguridad imposibles de romper con tecnologías actuales, protegiendo infraestructuras críticas como hospitales y redes de transporte.</p>
+          <p><a href="https://www.gartner.com/en/articles/top-technology-trends-2025" target="_blank" data-translate="blog-source">Fuente: Gartner</a></p>
         </div>
       </article>
 
@@ -74,8 +79,11 @@
       });
   </script>
 
+  <script src="scripts/translations.js"></script>
+  <script src="scripts/language-switcher.js"></script>
+
   <footer>
-    <p>&copy; 2025 Pablo Andrés Muñoz - Portafolio Profesional</p>
+    <p data-translate="footer-text">&copy; 2025 Pablo Andrés Muñoz - Portafolio Profesional</p>
   </footer>
 
   <script>
@@ -83,10 +91,14 @@
       const details = button.nextElementSibling;
       const isVisible = details.style.display === 'block';
       document.querySelectorAll('.article-details').forEach(el => el.style.display = 'none');
-      document.querySelectorAll('.toggle-btn').forEach(btn => btn.innerText = 'Leer más →');
+      document.querySelectorAll('.toggle-btn').forEach(btn => {
+        const currentLang = window.languageSwitcher ? window.languageSwitcher.getCurrentLanguage() : 'es';
+        btn.innerText = currentLang === 'es' ? 'Leer más →' : 'Read more →';
+      });
       if (!isVisible) {
         details.style.display = 'block';
-        button.innerText = 'Leer menos ↑';
+        const currentLang = window.languageSwitcher ? window.languageSwitcher.getCurrentLanguage() : 'es';
+        button.innerText = currentLang === 'es' ? 'Leer menos ↑' : 'Read less ↑';
       }
     }
   </script>

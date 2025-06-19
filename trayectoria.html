@@ -84,19 +84,24 @@
 </head>
 
 <body>
+  <!-- Language Switcher -->
+  <button id="language-switcher" onclick="changeLanguage(currentLanguage === 'es' ? 'en' : 'es')" aria-label="Cambiar idioma">
+    EN
+  </button>
+
   <header>
     <div class="header-content">
       <a href="index.html#inicio">
         <img src="images/logopablo2.png" alt="Logo Pablo">
       </a>
-      <h1>Trayectoria Profesional</h1>
+      <h1 data-translate="nav-trayectoria">Trayectoria Profesional</h1>
       <p>| Ingeniero de Sistemas - Software - IA |</p>
       <nav>
         <div class="navegacion-principal">
-          <a href="index.html#sobre-mi" class="nav-box"><span>Sobre mí</span></a>
-          <a href="index.html#competencias" class="nav-box"><span>Competencias</span></a>
-          <a href="index.html#blog" class="nav-box"><span>Blog</span></a>
-          <a href="index.html#contacto" class="nav-box"><span>Contacto</span></a>
+          <a href="index.html#sobre-mi" class="nav-box"><span data-translate="nav-sobre-mi">Sobre mí</span></a>
+          <a href="index.html#competencias" class="nav-box"><span data-translate="nav-competencias">Competencias</span></a>
+          <a href="index.html#blog" class="nav-box"><span data-translate="nav-blog">Blog</span></a>
+          <a href="index.html#contacto" class="nav-box"><span data-translate="nav-contacto">Contacto</span></a>
         </div>
       </nav>
     </div>
@@ -109,40 +114,40 @@
         <div class="stats-grid">
           <div class="stat-card">
             <div class="stat-number">4+</div>
-            <div class="stat-label">Años de Experiencia</div>
+            <div class="stat-label" data-translate="stats-experience">Años de Experiencia</div>
           </div>
           <div class="stat-card">
             <div class="stat-number">3+</div>
-            <div class="stat-label">Certificaciones</div>
+            <div class="stat-label" data-translate="stats-certifications">Certificaciones</div>
           </div>
         </div>
 
       <div class="timeline">
 
         <div class="timeline-entry">
-          <h3>💼 Experiencia Profesional</h3>
-          <p>
+          <h3 data-translate="timeline-experience">💼 Experiencia Profesional</h3>
+          <p data-translate="timeline-experience-desc">
             He trabajado como desarrollador full stack en múltiples proyectos empresariales, integrando tecnologías como Angular, .NET, Python y Azure. Enfocado en construir soluciones robustas y seguras, aplico metodologías ágiles junto a herramientas modernas de automatización y despliegue continuo.
           </p>
         </div>
 
         <div class="timeline-entry">
-          <h3>🎓 Formación Académica</h3>
-          <p>
+          <h3 data-translate="timeline-education">🎓 Formación Académica</h3>
+          <p data-translate="timeline-education-desc">
             Soy Ingeniero de Sistemas, con especialización en Gerencia de Proyectos y en Inteligencia Artificial. Actualmente curso una Maestría en Inteligencia Artificial y Ciencias de Datos en la Universidad Autónoma de Occidente (UAO). Mi formación integra habilidades en programación, estructuras de datos y pensamiento estratégico, lo que me permite implementar y liderar soluciones inteligentes orientadas a la transformación digital.
           </p>
         </div>
 
         <div class="timeline-entry">
-          <h3>🤖 Automatización e IA</h3>
-          <p>
+          <h3 data-translate="timeline-ai">🤖 Automatización e IA</h3>
+          <p data-translate="timeline-ai-desc">
             Integración y entrenamiento de modelos de inteligencia artificial en procesos empresariales, manejo de herramientas como n8n para automatización de flujos, AzureML para desarrollo y monitoreo de modelos supervisados y no supervisados. Optimización de procesos y toma de decisiones.
           </p>
         </div>
 
         <div class="timeline-entry">
-          <h3>🚀 Liderazgo y Proyectos</h3>
-          <p>
+          <h3 data-translate="timeline-leadership">🚀 Liderazgo y Proyectos</h3>
+          <p data-translate="timeline-leadership-desc">
             Liderazgo en proyectos de transformación digital y soluciones tecnológicas. Promotor de buenas prácticas DevOps, CI/CD, y metodologías ágiles. Acompaño equipos en su evolución técnica y estratégica.
           </p>
         </div>
@@ -164,8 +169,11 @@
       });
   </script>
 
+  <script src="scripts/translations.js"></script>
+  <script src="scripts/language-switcher.js"></script>
+
   <footer>
-    <p>&copy; 2025 Pablo Andres Muñoz - Ingeniero de Software</p>
+    <p data-translate="footer-text">&copy; 2025 Pablo Andres Muñoz - Ingeniero de Software</p>
   </footer>
 </body>
 </html>

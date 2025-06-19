@@ -19,6 +19,11 @@
 </head>
 <body id="top">
 
+<!-- Language Switcher -->
+<button id="language-switcher" onclick="changeLanguage(currentLanguage === 'es' ? 'en' : 'es')" aria-label="Cambiar idioma">
+  EN
+</button>
+
 <header>
   <div class="header-content">
     <a href="#inicio">
@@ -26,7 +31,7 @@
     </a>
 
     <h1>Pablo Andres Muñoz</h1>
-    <p>| Ingeniero de Sistemas - Software - IA |</p>
+    <p data-translate="subtitle-profession">| Ingeniero de Sistemas - Software - IA |</p>
     <p>
       <div class="tech-icons">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg" alt=".NET Core" title=".NET Core" />
@@ -40,12 +45,12 @@
 
     <nav>
       <div class="navegacion-principal">
-        <a href="#sobre-mi" class="nav-box"><span>Sobre mí</span></a>
-        <a href="#competencias" class="nav-box"><span>Competencias</span></a>
-        <a href="#servicios" class="nav-box"><span>Servicios</span></a>
-        <a href="#proyectos" class="nav-box"><span>Proyectos</span></a>
-        <a href="#blog" class="nav-box"><span>Blog</span></a>
-        <a href="#contacto" class="nav-box"><span>Contacto</span></a>
+        <a href="#sobre-mi" class="nav-box"><span data-translate="nav-sobre-mi">Sobre mí</span></a>
+        <a href="#competencias" class="nav-box"><span data-translate="nav-competencias">Competencias</span></a>
+        <a href="#servicios" class="nav-box"><span data-translate="nav-servicios">Servicios</span></a>
+        <a href="#proyectos" class="nav-box"><span data-translate="nav-proyectos">Proyectos</span></a>
+        <a href="#blog" class="nav-box"><span data-translate="nav-blog">Blog</span></a>
+        <a href="#contacto" class="nav-box"><span data-translate="nav-contacto">Contacto</span></a>
       </div>
     </nav>
   </div>
@@ -55,8 +60,8 @@
   <div class="hero-content">
     <div class="about-card-animated">
     <div class="hero-texto">
-      <h1>Innovación, desarrollo y automatización</h1>
-      <p>
+      <h1 data-translate="hero-title">Innovación, desarrollo y automatización</h1>
+      <p data-translate="hero-description">
       Integro mi experiencia en tecnologías de vanguardia con el potencial de la inteligencia artificial y herramientas de automatización para desarrollar soluciones innovadoras, eficientes y alineadas a las necesidades del entorno digital actual.
       </p>
     </div>
@@ -68,33 +73,33 @@
 </section>
 
 <section class="section about fade-in" id="sobre-mi">
-  <h2>Sobre mí</h2>
+  <h2 data-translate="about-title">Sobre mí</h2>
    <div class="about-card-animated">
    <div class="about-img">
       <img src="images/yo-profesional.png" alt="Pablo Andrés, ingeniero de software" />
     </div>
     <div class="about-text">
-      <p>
+      <p data-translate="about-description">
         Ingeniero de Sistemas, especialista en Gerencia de Proyectos y en Inteligencia Artificial, con una sólida trayectoria en desarrollo de software, programación y algoritmos. Cuento con conocimientos en IA, aplicados al desarrollo de soluciones innovadoras para optimizar procesos y potenciar estrategias de negocio. Poseo experiencia en la gestión de proyectos tecnológicos mediante metodologías ágiles, así como en la optimización e implementación de soluciones disruptivas.
       </p>
-      <a href="trayectoria.html" class="btn-cv" target="_blank">Ver trayectoria completa →</a>
+      <a href="trayectoria.html" class="btn-cv" target="_blank" data-translate="about-button">Ver trayectoria completa →</a>
     </div>
   </div>
 </section>
 
 
 <section class="section fade-in" id="competencias">
-  <h2>Competencias</h2>
+  <h2 data-translate="skills-title">Competencias</h2>
   <div class="about-card-animated reverse">
     <div class="about-text">
-      <p>
-        Experiencia sólida en desarrollo web Full Stack empleando tecnologías como <strong>Angular, .NET Core, Python, Azure</strong> y <strong>n8n</strong> para la automatización de procesos. He desarrollado soluciones robustas e inteligentes basadas en modelos de <strong>Inteligencia Artificial</strong>, integrando arquitecturas escalables y modernas.
+      <p data-translate="skills-description-1">
+        Experiencia sólida en desarrollo web Full Stack empleando tecnologías como Angular, .NET Core, Python, Azure y n8n para la automatización de procesos. He desarrollado soluciones robustas e inteligentes basadas en modelos de Inteligencia Artificial, integrando arquitecturas escalables y modernas.
       </p>
-      <p>
-        Manejo de <strong>metodologías ágiles</strong> como <em>Scrum</em> y <em>Kanban</em>, con experiencia liderando sprints, retrospectivas y gestión de historias de usuario a través de Azure DevOps.
+      <p data-translate="skills-description-2">
+        Manejo de metodologías ágiles como Scrum y Kanban, con experiencia liderando sprints, retrospectivas y gestión de historias de usuario a través de Azure DevOps.
       </p>
-      <p>
-        Habilidades blandas destacadas: <strong>liderazgo colaborativo, pensamiento analítico, comunicación efectiva, autonomía</strong> y <strong>adaptabilidad</strong> al cambio continuo en entornos tecnológicos dinámicos.
+      <p data-translate="skills-description-3">
+        Habilidades blandas destacadas: liderazgo colaborativo, pensamiento analítico, comunicación efectiva, autonomía y adaptabilidad al cambio continuo en entornos tecnológicos dinámicos.
       </p>
     </div>
     <div class="about-img">
@@ -104,42 +109,42 @@
 </section>
 
 <section class="section fade-in" id="servicios">
-  <h2 style="text-align:center;">Servicios Profesionales</h2>
+  <h2 style="text-align:center;" data-translate="services-title">Servicios Profesionales</h2>
   <div class="servicios-grid">
 
     <div class="service-box">
       <img src="images/ia-icon.png" alt="Asesoría IA" width="60" height="60"/>
-      <h3>Asesoría en IA</h3>
-      <p>Implementación y guía técnica en soluciones de inteligencia artificial personalizadas.</p>
+      <h3 data-translate="service-ia-title">Asesoría en IA</h3>
+      <p data-translate="service-ia-description">Implementación y guía técnica en soluciones de inteligencia artificial personalizadas.</p>
     </div>
 
     <div class="service-box">
       <img src="images/landigpage-icon.png" alt="Landing Page" width="60" height="60"/>
-      <h3>Landing Pages</h3>
-      <p>Diseño y desarrollo de páginas de aterrizaje modernas, rápidas y orientadas a conversión.</p>
+      <h3 data-translate="service-landing-title">Landing Pages</h3>
+      <p data-translate="service-landing-description">Diseño y desarrollo de páginas de aterrizaje modernas, rápidas y orientadas a conversión.</p>
     </div>
 
     <div class="service-box">
       <img src="images/net-icon.jpeg" alt="Desarrollo Software" width="60" height="60"/>
-      <h3>Desarrollo de Software</h3>
-      <p>Soluciones en Angular, .NET, Python y Azure para aplicaciones empresariales robustas.</p>
+      <h3 data-translate="service-software-title">Desarrollo de Software</h3>
+      <p data-translate="service-software-description">Soluciones en Angular, .NET, Python y Azure para aplicaciones empresariales robustas.</p>
     </div>
 
     <div class="service-box">
       <img src="images/mentoria-icon.png" alt="Mentoría Educativa" width="60" height="60"/>
-      <h3>Mentoría Educativa</h3>
-      <p>Acompañamiento profesional en formación técnica, proyectos académicos y desarrollo de habilidades.</p>
+      <h3 data-translate="service-mentoria-title">Mentoría Educativa</h3>
+      <p data-translate="service-mentoria-description">Acompañamiento profesional en formación técnica, proyectos académicos y desarrollo de habilidades.</p>
     </div>
   </div>
    <div style="text-align: center; margin-top: 2rem;">
-    <a href="servicios.html" class="btn-cv">Ver servicios completos →</a>
+    <a href="servicios.html" class="btn-cv" data-translate="services-button">Ver servicios completos →</a>
   </div>
 </section>
 
 
 
 <section class="section fade-in" id="proyectos">
-  <h2>Proyectos Destacados</h2>
+  <h2 data-translate="projects-title">Proyectos Destacados</h2>
   <div class="projects-grid">
 
 
@@ -149,14 +154,14 @@
   <div class="project-header">
     <img src="images/icon-chatbot.png" alt="Icono Chatbot" class="project-icon">
     <div class="project-title">
-      <h3>Chatbot Multisectorial con DeepSeek</h3>
-      <p class="project-stack">Stack: Python, Streamlit, LM Studio, DeepSeek, HuggingFace</p>
+      <h3 data-translate="project-chatbot-title">Chatbot Multisectorial con DeepSeek</h3>
+      <p class="project-stack" data-translate="project-chatbot-stack">Stack: Python, Streamlit, LM Studio, DeepSeek, HuggingFace</p>
     </div>
   </div>
-  <p class="project-description">
+  <p class="project-description" data-translate="project-chatbot-description">
     Plataforma adaptable que permite a empresas ofrecer servicio al cliente personalizado mediante un modelo LLM alojado localmente con DeepSeek. 
   </p>
-  <a href="https://github.com/Pabandres85/Proyecto-LLM-deepseek" target="_blank" class="project-btn">🔗 Ver en GitHub</a>
+  <a href="https://github.com/Pabandres85/Proyecto-LLM-deepseek" target="_blank" class="project-btn" data-translate="project-github">🔗 Ver en GitHub</a>
 </div>
 
     <!-- Proyecto 2 -->
@@ -164,50 +169,35 @@
       <div class="project-header">
         <img src="images/icon-health.png" alt="Icono IA médica" class="project-icon">
         <div>
-          <h3>Detección de Neumonía con IA</h3>
-          <p class="project-stack">Stack: Python, Docker, Radiografías</p>
+          <h3 data-translate="project-health-title">Detección de Neumonía con IA</h3>
+          <p class="project-stack" data-translate="project-health-stack">Stack: Python, Docker, Radiografías</p>
         </div>
       </div>
-      <p class="project-description">
+      <p class="project-description" data-translate="project-health-description">
         Sistema inteligente para detectar neumonía en imágenes de rayos X. Incluye pruebas unitarias y despliegue con Docker.
       </p>
-      <a href="https://github.com/Pabandres85/NeumoIA" target="_blank" class="project-btn">🔗 Ver en GitHub</a>
+      <a href="https://github.com/Pabandres85/NeumoIA" target="_blank" class="project-btn" data-translate="project-github">🔗 Ver en GitHub</a>
     </div>
-
-    <!-- Proyecto 3 -->
-   <!--  <div class="project-card">
-      <div class="project-header">
-        <img src="images/mlflow-icon.png" alt="Icono MLflow" class="project-icon">
-        <div>
-          <h3>Clasificador MLFlow + TinyBERT</h3>
-          <p class="project-stack">Stack: MLflow, Transformers, AG News</p>
-        </div>
-      </div>
-      <p class="project-description">
-        Clasificación de texto con TinyBERT, BERT-Mini y DistilBERT. Visualización de métricas con MLflow.
-      </p>
-      <a href="https://github.com/Pabandres85/Proyecto_MLFlow" target="_blank" class="project-btn">🔗 Ver en GitHub</a>
-    </div> -->
 
     <!-- Proyecto 3 -->
 <div class="project-card">
   <div class="project-header">
     <img src="images/n8n-icon.png" alt="Icono Automatización" class="project-icon">
     <div>
-      <h3>Automatización Empresarial con IA</h3>
-      <p class="project-stack">Stack: n8n, FastAPI, Streamlit, PostgreSQL</p>
+      <h3 data-translate="project-automation-title">Automatización Empresarial con IA</h3>
+      <p class="project-stack" data-translate="project-automation-stack">Stack: n8n, FastAPI, Streamlit, PostgreSQL</p>
     </div>
   </div>
-  <p class="project-description">
+  <p class="project-description" data-translate="project-automation-description">
     Flujo inteligente con IA para automatizar procesos empresariales, clasificar solicitudes y visualizar monitoreo en tiempo real.
   </p>
-  <a href="https://github.com/Pabandres85/LLM_N8N" target="_blank" class="project-btn">🔗 Ver en GitHub</a>
+  <a href="https://github.com/Pabandres85/LLM_N8N" target="_blank" class="project-btn" data-translate="project-github">🔗 Ver en GitHub</a>
 </div>
 
   </div>
 
   <div style="text-align: center; margin-top: 2rem;">
-    <a href="proyectos.html" class="btn-cv">Ver proyectos completos →</a>
+    <a href="proyectos.html" class="btn-cv" data-translate="projects-button">Ver proyectos completos →</a>
   </div>
 </section>
 
@@ -216,33 +206,33 @@
 
 <section class="section blog-preview fade-in" id="blog">
   <div class="card blog-promo">
-    <h2>📘 <strong>Blog Técnico</strong></h2>
-    <p>Explora entradas sobre desarrollo de software, inteligencia artificial, automatización y herramientas como Angular y Azure.</p>
-    <a href="blog.html" class="blog-link">Ir al Blog →</a>
+    <h2 data-translate="blog-title">📘 Blog Técnico</h2>
+    <p data-translate="blog-description">Explora entradas sobre desarrollo de software, inteligencia artificial, automatización y herramientas como Angular y Azure.</p>
+    <a href="blog.html" class="blog-link" data-translate="blog-button">Ir al Blog →</a>
   </div>
 </section>
 
 <section class="section fade-in" id="contacto">
-  <h2>Contacto</h2>
+  <h2 data-translate="contact-title">Contacto</h2>
   <div class="contact-card">
 
     <form class="contact-form" onsubmit="return enviarCorreo();">
-      <label for="nombre">Nombre:</label>
+      <label for="nombre" data-translate="contact-name">Nombre:</label>
       <input type="text" id="nombre" name="nombre" required>
 
-      <label for="correo">Correo:</label>
+      <label for="correo" data-translate="contact-email">Correo:</label>
       <input type="email" id="correo" name="correo" required>
 
-      <label for="mensaje">Mensaje:</label>
+      <label for="mensaje" data-translate="contact-message">Mensaje:</label>
       <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
 
-      <button type="submit" class="btn-cv">Enviar mensaje</button>
+      <button type="submit" class="btn-cv" data-translate="contact-send">Enviar mensaje</button>
     </form>
 
     <hr>
 
     <div class="social-links">
-      <p>También Contactame:</p>
+      <p data-translate="contact-also">También Contactame:</p>
       <a href="https://wa.me/573217476850" target="_blank"><img src="images/whatsapp-icon.png" alt="WhatsApp"></a>
       <a href="https://www.linkedin.com/in/pablo-andres-munoz-6281791bb" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
       <a href="https://github.com/Pabandres85" target="_blank"><img src="images/github-icon.png" alt="GitHub"></a>
@@ -288,6 +278,8 @@
 </script>
 
 <script src="scripts/contacto.js"></script>
+<script src="scripts/translations.js"></script>
+<script src="scripts/language-switcher.js"></script>
 
 <!-- Botón Volver Arriba -->
 <button id="scrollToTop" aria-label="Volver arriba" style="display: none;">
@@ -315,7 +307,7 @@
 </script>
 
 <footer>
-  <p>&copy; 2025 Pablo Andres Muñoz - Ingeniero de Software Full Stack</p>
+  <p data-translate="footer-text">&copy; 2025 Pablo Andres Muñoz - Ingeniero de Software Full Stack</p>
 </footer>
 
 </body>
