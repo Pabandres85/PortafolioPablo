@@ -20,8 +20,15 @@
 <body id="top">
 
 <!-- Language Switcher -->
-<button id="language-switcher" onclick="changeLanguage(currentLanguage === 'es' ? 'en' : 'es')" aria-label="Cambiar idioma">
-  EN
+<button id="language-switcher" onclick="changeLanguage(currentLanguage === 'es' ? 'en' : 'es')" aria-label="Cambiar idioma / Change language">
+  <span class="globe" aria-hidden="true">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="10" cy="10" r="9" stroke="#bbb" stroke-width="2" fill="#23272f"/>
+      <ellipse cx="10" cy="10" rx="5" ry="9" stroke="#bbb" stroke-width="2" fill="none"/>
+      <ellipse cx="10" cy="10" rx="9" ry="5" stroke="#bbb" stroke-width="2" fill="none"/>
+    </svg>
+  </span>
+  <span id="lang-text">EN</span>
 </button>
 
 <header>
@@ -206,7 +213,7 @@
 
 <section class="section blog-preview fade-in" id="blog">
   <div class="card blog-promo">
-    <h2 data-translate="blog-title">📘 Blog Técnico</h2>
+    <h2 data-translate="blog-title">�� Blog Técnico</h2>
     <p data-translate="blog-description">Explora entradas sobre desarrollo de software, inteligencia artificial, automatización y herramientas como Angular y Azure.</p>
     <a href="blog.html" class="blog-link" data-translate="blog-button">Ir al Blog →</a>
   </div>

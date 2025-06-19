@@ -82,8 +82,9 @@ function updateFormPlaceholders(lang) {
 // Function to update language switcher button
 function updateLanguageSwitcher(lang) {
   const switcher = document.getElementById('language-switcher');
+  const langText = document.getElementById('lang-text');
   if (switcher) {
-    switcher.textContent = lang === 'es' ? 'EN' : 'ES';
+    if (langText) langText.textContent = lang === 'es' ? 'EN' : 'ES';
     switcher.setAttribute('aria-label', lang === 'es' ? 'Switch to English' : 'Cambiar a Español');
   }
 }
