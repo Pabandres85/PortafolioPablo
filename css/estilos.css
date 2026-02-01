@@ -203,10 +203,10 @@ footer,
 
 /* HERO SECCIÓN */
 .hero {
-  background: rgba(255, 255, 255, 0.25); /* fondo semi-transparente */
-  backdrop-filter: blur(12px); /* efecto glassmorphism */
-  -webkit-backdrop-filter: blur(12px); /* Safari */
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.12); /* mucho más transparente para ver partículas */
+  backdrop-filter: blur(6px); /* blur reducido para mejor visibilidad */
+  -webkit-backdrop-filter: blur(6px); /* Safari */
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 1.5rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   margin: 2rem auto;
@@ -219,7 +219,7 @@ footer,
 .hero:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-  background: rgba(255, 255, 255, 0.35); /* más opaco en hover */
+  background: rgba(255, 255, 255, 0.22); /* más transparente en hover */
 }
 
 .hero-content {
@@ -298,13 +298,29 @@ header {
   -webkit-backdrop-filter: blur(15px); /* Safari */
   border-bottom: 2px solid rgba(51, 51, 51, 0.5);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
 }
 
+/* Canvas de partículas dentro del header */
+#header-particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none; /* Permitir clics a través del canvas */
+}
+
+/* Asegurar que el contenido del header esté por encima del canvas */
 .header-content {
   max-width: 1000px;
   margin: 0 auto;
   padding: 2.5rem 1rem 2rem;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 /* Logo */
@@ -511,10 +527,10 @@ input:focus, textarea:focus {
 }
 
 .service-box {
-  background: rgba(255, 255, 255, 0.3); /* fondo semi-transparente */
-  backdrop-filter: blur(10px); /* efecto glassmorphism */
-  -webkit-backdrop-filter: blur(10px); /* Safari */
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15); /* mucho más transparente */
+  backdrop-filter: blur(6px); /* blur reducido */
+  -webkit-backdrop-filter: blur(6px); /* Safari */
+  border: 1px solid rgba(255, 255, 255, 0.4);
   padding: 1.5rem;
   border-radius: 16px;
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
@@ -525,7 +541,7 @@ input:focus, textarea:focus {
 .service-box:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-  background: rgba(255, 255, 255, 0.45); /* más opaco en hover */
+  background: rgba(255, 255, 255, 0.28); /* más transparente en hover */
 }
 
 .service-box img {
@@ -823,10 +839,10 @@ input:focus, textarea:focus {
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.3); /* fondo semi-transparente */
-  backdrop-filter: blur(10px); /* efecto glassmorphism */
-  -webkit-backdrop-filter: blur(10px); /* Safari */
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15); /* mucho más transparente */
+  backdrop-filter: blur(6px); /* blur reducido */
+  -webkit-backdrop-filter: blur(6px); /* Safari */
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 16px;
   padding: 1.5rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -839,7 +855,7 @@ input:focus, textarea:focus {
 .project-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15); /* sombra más profunda */
-  background: rgba(255, 255, 255, 0.45); /* más opaco en hover */
+  background: rgba(255, 255, 255, 0.28); /* más transparente en hover */
 }
 
 .project-card h3 {
@@ -933,10 +949,10 @@ input:focus, textarea:focus {
 
 
 .card {
-  background: rgba(255, 255, 255, 0.3); /* fondo semi-transparente */
-  backdrop-filter: blur(10px); /* efecto glassmorphism */
-  -webkit-backdrop-filter: blur(10px); /* Safari */
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.15); /* mucho más transparente */
+  backdrop-filter: blur(6px); /* blur reducido */
+  -webkit-backdrop-filter: blur(6px); /* Safari */
+  border: 1px solid rgba(255, 255, 255, 0.35);
   padding: 1.5rem;
   margin: 1rem 0;
   border-radius: 12px;
@@ -946,7 +962,7 @@ input:focus, textarea:focus {
 }
 
 .card:hover {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.25); /* más transparente en hover */
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
   transform: translateY(-2px);
 }
@@ -1116,10 +1132,10 @@ input:focus, textarea:focus {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  background: rgba(255, 255, 255, 0.3); /* fondo semi-transparente */
-  backdrop-filter: blur(12px); /* efecto glassmorphism */
-  -webkit-backdrop-filter: blur(12px); /* Safari */
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15); /* mucho más transparente */
+  backdrop-filter: blur(6px); /* blur reducido */
+  -webkit-backdrop-filter: blur(6px); /* Safari */
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 16px;
   padding: 2rem;
   align-items: center;
@@ -1129,7 +1145,7 @@ input:focus, textarea:focus {
 }
 
 .about-card-animated:hover {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.25); /* más transparente en hover */
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
   transform: translateY(-3px);
 }
