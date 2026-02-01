@@ -148,6 +148,30 @@ body {
   background: #f5f5f5;
   color: #333;
   line-height: 1.6;
+  position: relative;
+}
+
+/* -------------------- FONDO ANIMADO DE PARTÍCULAS -------------------- */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+}
+
+/* Asegurar que todo el contenido esté por encima de las partículas */
+header,
+section,
+footer,
+.chatbot-toggle,
+.chatbot-box,
+#language-switcher,
+#scrollToTop {
+  position: relative;
+  z-index: 1;
 }
 
 .section {
@@ -179,19 +203,23 @@ body {
 
 /* HERO SECCIÓN */
 .hero {
-  background-color: #f0f0f0; /* fondo claro profesional */
+  background: rgba(255, 255, 255, 0.25); /* fondo semi-transparente */
+  backdrop-filter: blur(12px); /* efecto glassmorphism */
+  -webkit-backdrop-filter: blur(12px); /* Safari */
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 1.5rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   margin: 2rem auto;
   padding: 4rem 2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   max-width: 1000px;
   width: 83%;
 }
 
 .hero:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.35); /* más opaco en hover */
 }
 
 .hero-content {
@@ -265,9 +293,11 @@ body {
 
 /* -------------------- HEADER Y NAV -------------------- */
 header {
-  background-color: #1f1f1f; /* fondo oscuro profesional */
-  border-bottom: 2px solid #333;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: rgba(31, 31, 31, 0.75); /* fondo oscuro semi-transparente */
+  backdrop-filter: blur(15px); /* efecto glassmorphism */
+  -webkit-backdrop-filter: blur(15px); /* Safari */
+  border-bottom: 2px solid rgba(51, 51, 51, 0.5);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .header-content {
@@ -426,12 +456,14 @@ nav {
 
 /* -------------------- FOOTER -------------------- */
 footer {
-  background: #1f1f1f; /* fondo oscuro profesional */
+  background: rgba(31, 31, 31, 0.75); /* fondo oscuro semi-transparente */
+  backdrop-filter: blur(15px); /* efecto glassmorphism */
+  -webkit-backdrop-filter: blur(15px); /* Safari */
   color: #e0e0e0;       /* texto claro legible */
   text-align: center;
   padding: 1rem;
   font-size: 0.95rem;
-  border-top: 1px solid #333; /* línea superior sutil */
+  border-top: 1px solid rgba(51, 51, 51, 0.5); /* línea superior sutil */
 }
 
 /* -------------------- FORMULARIO -------------------- */
@@ -479,17 +511,21 @@ input:focus, textarea:focus {
 }
 
 .service-box {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.3); /* fondo semi-transparente */
+  backdrop-filter: blur(10px); /* efecto glassmorphism */
+  -webkit-backdrop-filter: blur(10px); /* Safari */
+  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 1.5rem;
   border-radius: 16px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .service-box:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.45); /* más opaco en hover */
 }
 
 .service-box img {
@@ -787,11 +823,14 @@ input:focus, textarea:focus {
 }
 
 .project-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.3); /* fondo semi-transparente */
+  backdrop-filter: blur(10px); /* efecto glassmorphism */
+  -webkit-backdrop-filter: blur(10px); /* Safari */
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 16px;
   padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   position: relative;
   overflow: hidden;
   text-align: left;
@@ -799,8 +838,8 @@ input:focus, textarea:focus {
 
 .project-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); /* sombra más sobria */
-  background: #c8cbcf; /* cambio de fondo en hover gris suave */
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15); /* sombra más profunda */
+  background: rgba(255, 255, 255, 0.45); /* más opaco en hover */
 }
 
 .project-card h3 {
@@ -894,12 +933,22 @@ input:focus, textarea:focus {
 
 
 .card {
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.3); /* fondo semi-transparente */
+  backdrop-filter: blur(10px); /* efecto glassmorphism */
+  -webkit-backdrop-filter: blur(10px); /* Safari */
+  border: 1px solid rgba(255, 255, 255, 0.25);
   padding: 1.5rem;
   margin: 1rem 0;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
 }
 
 
@@ -1067,12 +1116,22 @@ input:focus, textarea:focus {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  background-color: #f1f1f1;
+  background: rgba(255, 255, 255, 0.3); /* fondo semi-transparente */
+  backdrop-filter: blur(12px); /* efecto glassmorphism */
+  -webkit-backdrop-filter: blur(12px); /* Safari */
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 16px;
   padding: 2rem;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.about-card-animated:hover {
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
 }
 
 /* =============================
