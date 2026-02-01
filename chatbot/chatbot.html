@@ -3,14 +3,19 @@
   ​<span class="emoji-top">🤖?</span>
 </button>
   <div class="chatbot-box" id="chatBox">
-    <div class="chatbot-header">Asistente Virtual</div>
+    <div class="chatbot-header" id="chatbotHeader">Asistente Virtual</div>
     <div class="chatbot-messages" id="chatMessages">
-      <div class="bot">¡Hola! Soy el asistente virtual de Pablo<br> ¿En qué puedo ayudarte?💻</div>
+      <div class="bot" id="chatbotGreeting">¡Hola! Soy el asistente virtual de Pablo<br> ¿En qué puedo ayudarte?💻</div>
     </div>
-    <div class="chatbot-options">
-      <button onclick="responder('¿Cómo puedo agendar una cita?')">¿Cómo agendar una cita?</button>
-      <button onclick="responder('¿Qué servicios ofrece?')">¿Qué servicios ofrece?</button>
-      <button onclick="responder('¿Cuáles son los horarios disponibles?')">¿Horarios disponibles?</button>
+    <div class="chatbot-options" id="chatbotOptions">
+      <button onclick="responder('¿Quién es Pablo?')" data-es="¿Quién es Pablo?" data-en="Who is Pablo?"><span class="btn-text">¿Quién es Pablo?</span></button>
+      <button onclick="responder('¿Qué servicios ofrece?')" data-es="¿Qué servicios ofrece?" data-en="What services?"><span class="btn-text">Servicios</span></button>
+      <button onclick="responder('¿Qué tecnologías maneja?')" data-es="¿Qué tecnologías maneja?" data-en="What technologies?"><span class="btn-text">Tecnologías</span></button>
+      <button onclick="responder('Ver proyectos')" data-es="Ver proyectos" data-en="View projects"><span class="btn-text">Proyectos</span></button>
+      <button onclick="responder('¿Cuánto cuesta?')" data-es="¿Cuánto cuesta?" data-en="How much does it cost?"><span class="btn-text">Precios</span></button>
+      <button onclick="responder('¿Cómo agendar una cita?')" data-es="¿Cómo agendar una cita?" data-en="How to schedule?"><span class="btn-text">Agendar cita</span></button>
+      <button onclick="responder('¿Cuál es la metodología de trabajo?')" data-es="¿Cuál es la metodología de trabajo?" data-en="What's the methodology?"><span class="btn-text">Metodología</span></button>
+      <button onclick="responder('Información de contacto')" data-es="Información de contacto" data-en="Contact information"><span class="btn-text">Contacto</span></button>
     </div>
   </div>
 </div>
