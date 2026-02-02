@@ -331,13 +331,28 @@ footer,
 
 /* -------------------- HEADER Y NAV -------------------- */
 header {
-  background: rgba(31, 31, 31, 0.75); /* fondo oscuro semi-transparente */
-  backdrop-filter: blur(15px); /* efecto glassmorphism */
-  -webkit-backdrop-filter: blur(15px); /* Safari */
-  border-bottom: 2px solid rgba(51, 51, 51, 0.5);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg,
+    rgba(71, 85, 105, 0.08) 0%,
+    rgba(30, 41, 59, 0.12) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgba(71, 85, 105, 0.2);
+  box-shadow: 0 8px 32px rgba(71, 85, 105, 0.15),
+              0 4px 16px rgba(30, 41, 59, 0.1);
   position: relative;
   overflow: hidden;
+  animation: headerFadeIn 0.8s ease-out;
+}
+
+@keyframes headerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Canvas de partículas dentro del header */
@@ -361,6 +376,33 @@ header {
   z-index: 1;
 }
 
+.header-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(71, 85, 105, 0.3) 50%,
+    transparent 100%);
+  opacity: 0;
+  animation: lineSlideDown 1s ease-out 0.6s forwards;
+}
+
+@keyframes lineSlideDown {
+  from {
+    opacity: 0;
+    top: -10px;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+
 /* Logo */
 header img {
   height: 110px;
@@ -368,12 +410,29 @@ header img {
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 1rem;
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1); /* luz blanca sutil */
-  transition: transform 0.3s ease;
+  box-shadow: 0 0 20px rgba(71, 85, 105, 0.3),
+              0 0 40px rgba(71, 85, 105, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: float 3s ease-in-out infinite, logoGlow 2s ease-in-out infinite;
+  border: 3px solid rgba(71, 85, 105, 0.2);
 }
 
 header img:hover {
-  transform: scale(1.05);
+  transform: scale(1.08) translateY(-5px);
+  box-shadow: 0 0 30px rgba(71, 85, 105, 0.5),
+              0 0 60px rgba(71, 85, 105, 0.2);
+  border-color: rgba(71, 85, 105, 0.4);
+}
+
+@keyframes logoGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(71, 85, 105, 0.3),
+                0 0 40px rgba(71, 85, 105, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(71, 85, 105, 0.5),
+                0 0 60px rgba(71, 85, 105, 0.2);
+  }
 }
 
 .header-content a {
@@ -384,14 +443,43 @@ header img:hover {
 /* Títulos */
 header h1 {
   font-size: 1.8rem;
-  color: #e0e0e0; /* gris claro legible */
+  color: #e0e0e0;
   margin-bottom: 0.3rem;
+  animation: slideInUp 0.6s ease-out 0.2s both;
+  text-shadow: 0 2px 10px rgba(71, 85, 105, 0.3);
+  position: relative;
+}
+
+header h1::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+  border-radius: 2px;
+  animation: lineExpand 0.8s ease-out 0.4s both;
+}
+
+@keyframes lineExpand {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 60px;
+    opacity: 1;
+  }
 }
 
 header p {
   font-size: 1rem;
-  color: #b0b0b0;
+  color: #cbd5e1;
   margin: 0.2rem 0;
+  animation: slideInUp 0.6s ease-out 0.4s both;
+  text-shadow: 0 1px 5px rgba(71, 85, 105, 0.2);
 }
 
 header a img {
@@ -401,12 +489,18 @@ header a img {
   width: 170px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease;
+  box-shadow: 0 0 20px rgba(71, 85, 105, 0.3),
+              0 0 40px rgba(71, 85, 105, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: float 3s ease-in-out infinite, logoGlow 2s ease-in-out infinite;
+  border: 3px solid rgba(71, 85, 105, 0.2);
 }
 
 header a img:hover {
-  transform: scale(1.05);
+  transform: scale(1.08) translateY(-5px);
+  box-shadow: 0 0 30px rgba(71, 85, 105, 0.5),
+              0 0 60px rgba(71, 85, 105, 0.2);
+  border-color: rgba(71, 85, 105, 0.4);
 }
 
 header a {
