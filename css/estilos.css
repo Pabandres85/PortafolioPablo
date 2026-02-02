@@ -1581,7 +1581,7 @@ main {
 }
 
 .section {
-  background: #f0f0f0;
+ /*  background: #f0f0f0; */
   padding: 2rem;
   margin: 2rem auto;
   border-radius: 12px;
