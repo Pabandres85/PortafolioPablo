@@ -106,7 +106,7 @@ const translations = {
     "contact-also": "También Contactame:",
 
     // Footer
-    "footer-text": "© 2025 Pablo Andres Muñoz - Ingeniero de Software Full Stack",
+    "footer-text": "© 2026 Pablo Andres Muñoz - Ingeniero de Software Full Stack",
 
     // Stats
     "stats-experience": "Años de Experiencia",
@@ -238,7 +238,7 @@ const translations = {
     "contact-also": "Also Contact Me:",
 
     // Footer
-    "footer-text": "© 2025 Pablo Andres Muñoz - Full Stack Software Engineer",
+    "footer-text": "© 2026 Pablo Andres Muñoz - Full Stack Software Engineer",
 
     // Stats
     "stats-experience": "Years of Experience",
