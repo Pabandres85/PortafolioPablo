@@ -199,12 +199,12 @@ function responder(pregunta) {
       ⭐ Referencias y colaboraciones:<br><br>
       He trabajado con empresas en sectores de tecnología, educación y servicios, entregando soluciones que optimizan procesos y potencian la transformación digital.<br><br>
       📧 Puedo proporcionarte referencias específicas vía email o LinkedIn según el tipo de proyecto que te interese.<br><br>
-      <a href="https://www.linkedin.com/in/pabandres" target="_blank">Ver perfil en LinkedIn →</a>
+      <a href="www.linkedin.com/in/pabandres85" target="_blank">Ver perfil en LinkedIn →</a>
     ` : `
       ⭐ References and collaborations:<br><br>
       I've worked with companies in technology, education, and services sectors, delivering solutions that optimize processes and drive digital transformation.<br><br>
       📧 I can provide specific references via email or LinkedIn based on your project type.<br><br>
-      <a href="https://www.linkedin.com/in/pabandres" target="_blank">View LinkedIn profile →</a>
+      <a href="www.linkedin.com/in/pabandres85" target="_blank">View LinkedIn profile →</a>
     `;
   }
 
@@ -251,15 +251,15 @@ function responder(pregunta) {
            preguntaLower.includes("contact") || preguntaLower.includes("reach") || preguntaLower.includes("get in touch")) {
     bot.innerHTML = currentLang === 'es' ? `
       📬 Canales de contacto:<br><br>
-      📧 Email principal: <a href="mailto:pablo.dev.ai@gmail.com">pablo.dev.ai@gmail.com</a><br>
+      📧 Email principal: <a href="mailto:ingenieropabloandres0@gmail.com">ingenieropabloandres0@gmail.com</a><br>
       📧 Email alternativo: <a href="mailto:ingenieropabloandres0@gmail.com">ingenieropabloandres0@gmail.com</a><br>
-      💼 LinkedIn: <a href="https://www.linkedin.com/in/pabandres" target="_blank">pabandres</a><br>
+      💼 LinkedIn: <a href="https://www.linkedin.com/in/pabandres85" target="_blank">pabandres85</a><br>
       📱 WhatsApp: <a href="https://wa.me/573217476850" target="_blank">+57 321 747 6850</a>
     ` : `
       📬 Contact channels:<br><br>
-      📧 Primary email: <a href="mailto:pablo.dev.ai@gmail.com">pablo.dev.ai@gmail.com</a><br>
+      📧 Primary email: <a href="mailto:ingenieropabloandres0@gmail.com">ingenieropabloandres0@gmail.com</a><br>
       📧 Alternative email: <a href="mailto:ingenieropabloandres0@gmail.com">ingenieropabloandres0@gmail.com</a><br>
-      💼 LinkedIn: <a href="https://www.linkedin.com/in/pabandres" target="_blank">pabandres</a><br>
+      💼 LinkedIn: <a href="https://www.linkedin.com/in/pabandres85" target="_blank">pabandres85</a><br>
       📱 WhatsApp: <a href="https://wa.me/573217476850" target="_blank">+57 321 747 6850</a>
     `;
   }
